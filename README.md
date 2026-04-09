@@ -92,4 +92,4 @@ RQ4のオープンコーディングについては
 
 ## 結果の確認
 
-`notebooks/rq{n}.ipynb`が各RQの結果を出力するコードが，`/results/rq{n}`に各RQの結果が格納されている
+`notebooks/rq{n}.ipynb`に各RQの結果を出力するコードが，`/results/rq{n}`に各RQの結果が格納されている
