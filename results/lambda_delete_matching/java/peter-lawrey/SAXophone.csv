@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+8437bfd21c55af1be7c778bfb59d96235de7e409,saxophone/src/test/java/net/openhft/saxophone/fix/FixSaxParserTest.java,1380,1516,81527872bb29694691cd276327a4958a334c9290,saxophone/src/test/java/net/openhft/saxophone/fix/FixSaxParserTest.java,1419,1514

@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+d5edd65ca39f45debfb41ce2759b3798f4cd0d66,addon/visit.js,4748,4982,1b49e4f15f8f2562769cfdc92d1cb71cac3781cb,addon/visit.js,4766,4980

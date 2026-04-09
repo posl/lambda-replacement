@@ -1,0 +1,5 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+319e9e99ddb08a0946fe055888d1275ae65be882,Manatee.Trello/Internal/RequestProcessing/RestRequestProcessor.cs,2332,2377,2d29e78cbb4250c0c93aa19687a65c5bdbc1e357,Manatee.Trello/Internal/RequestProcessing/RestRequestProcessor.cs,2117,2154
+3b3de687d8d7b9f6f81f3238f39a35ee0f1c63a8,Manatee.Trello.Test/DevTest.cs,575,690,39305eb1aa020c9560040e718499ec6c50863309,Manatee.Trello.Test/DevTest.cs,628,886
+3b3de687d8d7b9f6f81f3238f39a35ee0f1c63a8,Manatee.Trello.Test/DevTest.cs,575,690,3c7369b83d2de6eaa95ac0a47d284ae9986100b4,Manatee.Trello.Test/DevTest.cs,751,971
+75018ca467c63c59e64759c6e56a7d252196d37b,Manatee.Trello.UnitTests/DevTest.cs,3695,3761,857eb00cebe8ba989499174bfc00fe3e5622b075,Manatee.Trello.UnitTests/DevTest.cs,3686,3735

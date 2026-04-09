@@ -1,0 +1,7 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+ba557ab7df7cd53e44a4fac0671f7783b9f607db,src/QsCompiler/Compiler/CompilationLoader.cs,27998,28124,f6e34ff33467d44238c9432ebdb2d80aae32616b,src/QsCompiler/Compiler/CompilationLoader.cs,32949,33052
+ba557ab7df7cd53e44a4fac0671f7783b9f607db,src/QsCompiler/Compiler/CompilationLoader.cs,27651,27776,f6e34ff33467d44238c9432ebdb2d80aae32616b,src/QsCompiler/Compiler/CompilationLoader.cs,33318,33423
+ba557ab7df7cd53e44a4fac0671f7783b9f607db,src/QsCompiler/Compiler/CompilationLoader.cs,27301,27428,f6e34ff33467d44238c9432ebdb2d80aae32616b,src/QsCompiler/Compiler/CompilationLoader.cs,33684,33780
+ba557ab7df7cd53e44a4fac0671f7783b9f607db,src/QsCompiler/Compiler/CompilationLoader.cs,26952,27081,f6e34ff33467d44238c9432ebdb2d80aae32616b,src/QsCompiler/Compiler/CompilationLoader.cs,32601,32695
+008bc5f0d4c2cbc2607e6ee3f090b08e2f33e1eb,src/QsCompiler/QirGeneration/ScopeManager.cs,32196,32309,28dc3bc67d706d9f9589e738db26331d9ce31e7e,src/QsCompiler/QirGeneration/ScopeManager.cs,32238,32307
+9689a96fe3c77123a96b6ba79319e547623b8180,src/QsCompiler/QirGeneration/Context.cs,69853,69970,34bd1fe9cf10e1264b46ef6c6c1266c071e495c1,src/QsCompiler/QirGeneration/Context.cs,69914,69968

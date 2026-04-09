@@ -1,0 +1,3 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+74b041a573967c860b3d2192aa9b767ea0703176,DataGridExtensions/Behaviors/ExtendedStarSizeBehavior.cs,14472,14576,a16f7be6f1c982e707918d4b43be891beec32324,DataGridExtensions/Behaviors/ExtendedStarSizeBehavior.cs,16755,16806
+74b041a573967c860b3d2192aa9b767ea0703176,DataGridExtensions/Behaviors/ExtendedStarSizeBehavior.cs,3691,3802,a16f7be6f1c982e707918d4b43be891beec32324,DataGridExtensions/Behaviors/ExtendedStarSizeBehavior.cs,4068,4128

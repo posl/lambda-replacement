@@ -1,0 +1,10 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+f90e77cc6c5ee9b17ea0722d9b7806290e843a4e,Hydra/Plugins/Sterling/SterlingTask.cs,1246,1354,14968937de25184c06bf00e666c589062457a35f,Hydra/Plugins/Sterling/SterlingTask.cs,1323,1396
+f90e77cc6c5ee9b17ea0722d9b7806290e843a4e,Hydra/Plugins/Rithmic/RithmicTask.cs,3896,4199,14968937de25184c06bf00e666c589062457a35f,Hydra/Plugins/Rithmic/RithmicTask.cs,3972,4194
+f90e77cc6c5ee9b17ea0722d9b7806290e843a4e,Hydra/Plugins/SmartCom/SmartComTask.cs,3398,3697,14968937de25184c06bf00e666c589062457a35f,Hydra/Plugins/SmartCom/SmartComTask.cs,3472,3746
+f90e77cc6c5ee9b17ea0722d9b7806290e843a4e,Hydra/Plugins/OpenECry/OECTask.cs,3343,3585,14968937de25184c06bf00e666c589062457a35f,Hydra/Plugins/OpenECry/OECTask.cs,3415,3580
+f90e77cc6c5ee9b17ea0722d9b7806290e843a4e,Hydra/Plugins/Micex/MicexTask.cs,4245,4687,14968937de25184c06bf00e666c589062457a35f,Hydra/Plugins/Micex/MicexTask.cs,4319,4682
+f90e77cc6c5ee9b17ea0722d9b7806290e843a4e,Hydra/Plugins/LMAX/LmaxTask.cs,3294,3580,14968937de25184c06bf00e666c589062457a35f,Hydra/Plugins/LMAX/LmaxTask.cs,3367,3575
+49e74fe59b234e164dfb35ffae702aa359a17519,Connectors/Quik/Lua/LuaFixTransactionMessageAdapter.cs,4828,7044,dadfd5b0efa28a36665a8904be4dfd172b767f53,Connectors/Quik/Lua/LuaFixTransactionMessageAdapter.cs,1776,3911
+f90e77cc6c5ee9b17ea0722d9b7806290e843a4e,Hydra/Plugins/InteractiveBrokers/IBTask.cs,3104,3322,14968937de25184c06bf00e666c589062457a35f,Hydra/Plugins/InteractiveBrokers/IBTask.cs,3175,3317
+f90e77cc6c5ee9b17ea0722d9b7806290e843a4e,Hydra/Plugins/Blackwood/BlackwoodTask.cs,3959,4268,14968937de25184c06bf00e666c589062457a35f,Hydra/Plugins/Blackwood/BlackwoodTask.cs,4038,4264

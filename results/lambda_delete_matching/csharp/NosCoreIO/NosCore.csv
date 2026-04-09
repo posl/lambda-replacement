@@ -1,0 +1,6 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+b9d282aa7f2df078ba2ebd1b4cd70ae05da1c617,src/NosCore.Controllers/InventoryPacketController.cs,3471,3636,61fd9b634adb897841e1290fa1ba0f963528c7c4,src/NosCore.Controllers/InventoryPacketController.cs,3534,3567
+31aa4e09c3d9416e93f57184b8512d2b1ccd6dc6,src/NosCore.WorldServer/Startup.cs,4291,4396,5d101aea7472de5945f9974b34de696c8ad6c814,src/NosCore.WorldServer/Startup.cs,3917,3956
+e551020360f16871db5051c73866264ea54b4f75,src/NosCore.MasterServer/Controllers/MailController.cs,7807,7933,922a24862b388771d6cbb973783d7754fe9992f3,src/NosCore.MasterServer/Controllers/MailController.cs,5375,5436
+3f1c4209b3eb6636b72f2c6f8ff6bc142f872ecf,src/NosCore.WorldServer/Startup.cs,22842,23273,7fd2af7d06641333fac348174277d22c3c893d63,src/NosCore.WorldServer/Startup.cs,22866,23061
+3f1c4209b3eb6636b72f2c6f8ff6bc142f872ecf,src/NosCore.MasterServer/Startup.cs,10587,11037,7fd2af7d06641333fac348174277d22c3c893d63,src/NosCore.MasterServer/Startup.cs,10628,10823

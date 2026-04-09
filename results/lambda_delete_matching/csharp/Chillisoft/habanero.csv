@@ -1,0 +1,6 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+c58fdb8e47cac1a80758f64dc91dd28d9452626b,source/Habanero.UI.Base/MultiSelector/MultiSelectorModel.cs,6301,6375,880417d2d3fa08b081d49f8cadb950678ede4c45,source/Habanero.UI.Base/MultiSelector/MultiSelectorModel.cs,7080,7118
+c58fdb8e47cac1a80758f64dc91dd28d9452626b,source/Habanero.UI.Base/MultiSelector/MultiSelectorModel.cs,5997,6071,880417d2d3fa08b081d49f8cadb950678ede4c45,source/Habanero.UI.Base/MultiSelector/MultiSelectorModel.cs,6774,6814
+7bd2d1835fb1ca2894581f4de764282470c00ca5,source/Habanero.Bo/TransactionCommitter.cs,7282,7425,c9e6ebe2dc15924cc93c5eca281b3e688670dd68,source/Habanero.Bo/TransactionCommitter.cs,7645,7702
+51898d6061ef66d4cdeaa08e503d04651bc88188,source/Habanero.UI.Base/MultiSelector/MultiSelectorManager.cs,4361,4440,880417d2d3fa08b081d49f8cadb950678ede4c45,source/Habanero.UI.Base/MultiSelector/MultiSelectorManager.cs,4410,4455
+c58fdb8e47cac1a80758f64dc91dd28d9452626b,source/Habanero.UI.Base/MultiSelector/MultiSelectorModel.cs,5706,5773,880417d2d3fa08b081d49f8cadb950678ede4c45,source/Habanero.UI.Base/MultiSelector/MultiSelectorModel.cs,6478,6516

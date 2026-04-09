@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+0468a66de4747c03e197ddafc1af3e0ee0187566,tests/KubernetesClient.Tests/WatchTests.cs,9090,9173,4e29dff8d28f7b7ab49b92c424771f930ac3df5f,tests/KubernetesClient.Tests/WatchTests.cs,9100,9127

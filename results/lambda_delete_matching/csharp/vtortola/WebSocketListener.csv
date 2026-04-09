@@ -1,0 +1,3 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+8e7b24244513feaa024426e1e735b2e19d11b835,samples/TerminalServer/TerminalServer.CliServer/Program.cs,1130,1164,907dba588a5aa1cff3f0f009648de9831c5012d6,samples/TerminalServer/TerminalServer.CliServer/Program.cs,1139,1162
+cae9c5e119ce2fc9c8aca3e96d8a34eead856a3d,vtortola.WebSockets/Http/HttpNegotiationQueue.cs,2341,2384,ca093c766920fc218a7f704d17727894883c3593,vtortola.WebSockets/Http/HttpNegotiationQueue.cs,2350,2382

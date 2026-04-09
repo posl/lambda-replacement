@@ -1,0 +1,3 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+f123f2f607a516603a80df1533c94527aceb9c72,test/org/github/jamm/GuessTest.java,7504,8025,66bedf27a330b9cd99fe1017a3c1e725fb96dd4c,test/org/github/jamm/GuessTest.java,7528,8022
+f123f2f607a516603a80df1533c94527aceb9c72,test/org/github/jamm/GuessTest.java,5969,6701,66bedf27a330b9cd99fe1017a3c1e725fb96dd4c,test/org/github/jamm/GuessTest.java,5993,6698

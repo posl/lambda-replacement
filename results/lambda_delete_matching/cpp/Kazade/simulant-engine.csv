@@ -1,0 +1,3 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+55385353253351437a9d1e16b46fed9fae23b5eb,kglt/ui/interface.cpp,1582,1710,7fea4ffe3def70d7488e5e35d7908b8615be0f28,kglt/ui/interface.cpp,2150,2254
+4d9886dc79090062afe9411450562e5057fdc44e,kglt/shortcuts.cpp,427,568,a30e6dbf4870c41aa7823b878b0b6384f8cb862a,kglt/shortcuts.cpp,455,566

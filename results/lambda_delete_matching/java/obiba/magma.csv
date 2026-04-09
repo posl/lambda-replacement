@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+c86274dbe4eb4606506caa15c0748239197cf8ed,magma-api/src/main/java/org/obiba/magma/views/JoinTable.java,5426,5518,8cccdc90e4698a270ea7a306db79e67a25e94646,magma-api/src/main/java/org/obiba/magma/views/JoinTable.java,6374,6477

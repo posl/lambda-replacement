@@ -1,0 +1,4 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+c21258b7e5d8a4ac844e04581afb75a4bd1b0a55,SS.Ynote.Classic/UI/Editor.cs,5436,5542,0feb4dded300491fe7765c6cad823f85e296ba48,SS.Ynote.Classic/UI/Editor.cs,5672,5711
+2fa9d81ef776a49054816cd0ae4662eb3256f4ac,SS.Ynote.Classic/UI/Editor.cs,10974,11023,6c3e5fd6b377f1a15fc80e3e0f21e6f0e140cb61,SS.Ynote.Classic/UI/Editor.cs,11031,11062
+8fbbde8da4fd4fd490aa85f767c3a672e06f58ef,SS.Ynote.Classic/Helpers/FileExtensions.cs,3651,3744,7c8f7e55d890570e819beaa5a0d1ed9045e553c0,SS.Ynote.Classic/Helpers/FileExtensions.cs,4501,4531

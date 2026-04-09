@@ -1,0 +1,8 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+5ca7a102394a0361d69fe3e6a46cccfb65528064,SpiceSharp/Components/Currentsources/CCCS/AcBehavior.cs,1585,1651,59556e52d5656ac3f7e47ad5149b856cbdd162bf,SpiceSharp/Components/Currentsources/CCCS/AcBehavior.cs,1616,1685
+5ca7a102394a0361d69fe3e6a46cccfb65528064,SpiceSharp/Components/Currentsources/CCCS/AcBehavior.cs,1292,1363,59556e52d5656ac3f7e47ad5149b856cbdd162bf,SpiceSharp/Components/Currentsources/CCCS/AcBehavior.cs,1290,1364
+c5e637c4b644838ba6f0a329d213a32dca028d3d,SpiceSharp/Components/Currentsources/VCCS/LoadBehavior.cs,1605,1693,da3c89c1803057606eb745759f25f9bc6f3844ad,SpiceSharp/Components/Currentsources/VCCS/LoadBehavior.cs,1558,1649
+c5e637c4b644838ba6f0a329d213a32dca028d3d,SpiceSharp/Components/Currentsources/VCCS/AcBehavior.cs,1419,1490,59556e52d5656ac3f7e47ad5149b856cbdd162bf,SpiceSharp/Components/Currentsources/VCCS/AcBehavior.cs,1401,1475
+c5e637c4b644838ba6f0a329d213a32dca028d3d,SpiceSharp/Components/Currentsources/VCCS/AcBehavior.cs,1619,1715,59556e52d5656ac3f7e47ad5149b856cbdd162bf,SpiceSharp/Components/Currentsources/VCCS/AcBehavior.cs,1623,1722
+9cabe23985cebbc0408b687b3acee1bc7f749f65,SpiceSharp/Components/RLC/IND/Inductor.cs,771,843,cab1ccde37f93f277415a311eac076bef3487e8f,SpiceSharp/Components/RLC/IND/Inductor.cs,807,835
+9cabe23985cebbc0408b687b3acee1bc7f749f65,SpiceSharp/Components/RLC/IND/Inductor.cs,771,843,28f808c1d595db3ae8a6dfaa9144acfbab620be0,SpiceSharp/Components/RLC/IND/Inductor.cs,807,835

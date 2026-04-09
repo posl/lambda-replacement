@@ -1,0 +1,10 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+7684028338d8b2758f4f1640d13873761182452c,WPFSKillTree/Views/MainWindow.xaml.cs,40247,40340,e74dd89cef459e7a15a22ab7655350534b732e0e,WPFSKillTree/Views/MainWindow.xaml.cs,75722,75772
+3e4393811a0f1ecca421c3afd3c97c386a2dc4a8,WPFSKillTree/Model/Items/Item.cs,4060,4131,16e01bac822212c395b3f83b3af39c3435489d2a,WPFSKillTree/Model/Items/Item.cs,4481,4516
+3e4393811a0f1ecca421c3afd3c97c386a2dc4a8,WPFSKillTree/Model/Items/Item.cs,3535,3616,16e01bac822212c395b3f83b3af39c3435489d2a,WPFSKillTree/Model/Items/Item.cs,3971,4013
+b387906192068d287ab265d725027a46fdb4e102,WPFSKillTree/Views/MainWindow.xaml.cs,6850,6926,2f89bb6bc776a3fe70d0d07576ad51142380bf73,WPFSKillTree/Views/MainWindow.xaml.cs,9071,9091
+9045f3e7b90f9c1460d6f296a9714f6f3304f3a6,WPFSKillTree/Model/Serialization/PersistentDataSerializationService.cs,1579,1637,46f1039aaa07c323180c960ecb1b881efcddbf50,WPFSKillTree/Model/Serialization/PersistentDataSerializationService.cs,1599,1636
+0cee50c1fe1532d30428f7be4bd78517fe6ae52d,WPFSKillTree/Views/MainWindow.xaml.cs,38490,38548,8d4cca78be741077c5cbf316e7f4a41eab35f0ed,WPFSKillTree/Views/MainWindow.xaml.cs,4031,4059
+ae84f85d9ec5643f640aaf92566aad5f36236845,PoESkillTree.Computation.Builders.Tests/Values/ValueBuilderTest.cs,2844,2912,d1617f9fd3560529962fc6dd409b37b8c4e5e35c,PoESkillTree.Computation.Builders.Tests/Values/ValueBuilderTest.cs,2923,2941
+69b52543cb2cc6916e00580eb7b7698b82f6dd5e,PoESkillTree.Computation.Builders/Stats/StatBuilder.cs,2782,3016,f9c201e96f97db5c3108267f9516b784a8c50eed,PoESkillTree.Computation.Builders/Stats/StatBuilder.cs,3134,3212
+f43271208ac4b1a2e49efba9203baf6890d15f78,PoESkillTree.Computation.Console/CompositionRoot.cs,1924,2085,a8e2163a8cb51ec9773b6ecccac349d4ae154d43,PoESkillTree.Computation.Console/CompositionRoot.cs,2042,2125

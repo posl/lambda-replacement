@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+0e4c22842c2b7651627f1db195963559ff4a0c31,src/globals/global.cpp,2444,3058,368870dcbe5484850ba37a676caaaa425968f69a,src/globals/global.cpp,2575,3078

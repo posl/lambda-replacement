@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+a7aac32391047afd116a31c08aee706b591c1661,buildin_modules/weinre/web/target/target-script-min.js,40297,40700,292d98a8af573a6c1dc33b4f20cda89531c796ff,buildin_modules/weinre/web/target/target-script-min.js,40308,40697

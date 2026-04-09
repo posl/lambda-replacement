@@ -1,0 +1,6 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+fa80c814874a2893e4323ba5148fba21d7f421cd,src/rpc/blockchain.cpp,66922,67207,fab34d392ca415c27605040dc0fc738016c9a0ca,src/rpc/blockchain.cpp,55070,55439
+586190f0b4740457cb86cba632e3d64e6dfe9b0c,src/rpc/blockchain.cpp,56654,63412,fab34d392ca415c27605040dc0fc738016c9a0ca,src/rpc/blockchain.cpp,55070,55439
+153e6860e84df0a3d52e5a3b2fe9c37b5e0b029a,src/bench/addrman.cpp,3204,3934,6dff6214be768a3fab6d5201daf5ef6071764746,src/bench/addrman.cpp,3214,3856
+e177fcab3831b6d259da5164cabedcc9e78f6957,src/validation.cpp,15672,15755,938643c3b2b8e7b9aec1df34a2f8a95d616d8dd5,src/validation.cpp,14360,14440
+fa475e9c7977a952617738f2ee8cf600c07d4df8,src/qt/walletcontroller.cpp,14203,15052,6f3563a6eb558522cff2741153712dd8f2fe9fcf,src/qt/walletcontroller.cpp,15132,15541

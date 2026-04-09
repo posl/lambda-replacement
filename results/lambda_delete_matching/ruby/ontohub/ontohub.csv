@@ -1,0 +1,3 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+3dc4e9663ede590ca9b2d7bfafd81a13ea21cdb2,lib/ontology_search.rb,4306,4403,5f289ede8e14ace0747ffb53e40cca9cd5df7605,lib/ontology_search.rb,4837,4901
+3dc4e9663ede590ca9b2d7bfafd81a13ea21cdb2,lib/ontology_search.rb,3829,3914,5f289ede8e14ace0747ffb53e40cca9cd5df7605,lib/ontology_search.rb,4360,4404

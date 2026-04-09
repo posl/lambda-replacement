@@ -1,0 +1,3 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+da6612babeb871db07446b360448299fb29aa7b8,src/containers/SearchResultTabs.js,2126,2335,e1ad4fc19ae491f0531b5d47986dae57e5553ef2,src/containers/SearchResultTabs.js,2827,3021
+da6612babeb871db07446b360448299fb29aa7b8,src/containers/Search.js,5469,5524,0fc0942ecae1581c32ba926f912e1971506dd3a4,src/containers/Search.js,5419,5459

@@ -1,0 +1,4 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+21a2815dc2206be0c5be5e2a4593e38afe0bc6ad,src/ControlzEx/Behaviors/WindowChromeBehavior.cs,9463,9600,55aeeff27b07ee5d9ce5bb0353bcd4afd94b50d4,src/ControlzEx/Behaviors/WindowChromeBehavior.cs,9709,9739
+9c534ce687df90a9b13512ff49151a9db839a719,src/ControlzEx/Theming/Theme.cs,4967,5130,cf2333cbcb70c0340c97ae3d94468a776f057dcd,src/ControlzEx/Theming/Theme.cs,6351,6404
+6eccf9d32f56dfaec726b06b06352df3116346c7,src/ControlzEx/Controls/GlowWindow.xaml.cs,17589,17785,d605514caac81869eb6ebb0ff45ab2d37855c1c5,src/ControlzEx/Controls/GlowWindow.xaml.cs,17653,17782

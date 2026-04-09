@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+28fce0a17beba3a2306456a3c07dc0af8dd551bc,template/gulpfile.js,2654,2722,a6bce0a4eead8a2e7ecd40417404b54caa8315dd,template/gulpfile.js,3829,3871

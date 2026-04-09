@@ -1,0 +1,3 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+330d18d0474e8b9fdce70f89b446766d818ec9ec,src/main/java/com/unitedinternet/troilus/Record.java,6245,6372,9c2a67349b9aba6da132587270f9603e2e5408b8,src/main/java/com/unitedinternet/troilus/Record.java,7264,7377
+9566d3dbdde2a7a3afae1a9752865dba91d77656,src/main/java/com/unitedinternet/troilus/Record.java,6245,6372,9c2a67349b9aba6da132587270f9603e2e5408b8,src/main/java/com/unitedinternet/troilus/Record.java,7264,7377

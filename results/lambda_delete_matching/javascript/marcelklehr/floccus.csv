@@ -1,0 +1,6 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+c55d52658e37eabc5a2276d003ea2253cdac2d31,src/lib/AccountStorage.js,425,507,9a4b66f06e8dd298bd72e6b0bdc72716716c88b8,src/lib/AccountStorage.js,432,507
+1b942c95b7fb842b6742b35b12e221bf4ee550ec,src/lib/adapters/Nextcloud.js,15005,15254,847dbae7f97c42322b6141ea7fcf5c205e2af248,src/lib/adapters/Nextcloud.js,16960,17199
+1b942c95b7fb842b6742b35b12e221bf4ee550ec,src/lib/adapters/Nextcloud.js,13933,14201,847dbae7f97c42322b6141ea7fcf5c205e2af248,src/lib/adapters/Nextcloud.js,14221,14446
+1b942c95b7fb842b6742b35b12e221bf4ee550ec,src/lib/adapters/Nextcloud.js,12243,12509,847dbae7f97c42322b6141ea7fcf5c205e2af248,src/lib/adapters/Nextcloud.js,12320,12546
+d1b0d5cd46eca982beaa3879b71defa1c7f8604b,gulpfile.js,2953,3129,9ddbb1673339006d7148f223539f6a2332a3f2be,gulpfile.js,1314,1491

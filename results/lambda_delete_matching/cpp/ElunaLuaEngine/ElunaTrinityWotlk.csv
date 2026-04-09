@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+14c2b2d6cd2303609f1a1859e727ace7b8ea649c,src/server/game/Spells/Spell.cpp,256735,257427,3d3d0492ab8dad40d5590e80f45bdfbdbcbe7497,src/server/game/Spells/Spell.cpp,256761,257480

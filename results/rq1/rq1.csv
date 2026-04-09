@@ -1,0 +1,7 @@
+,project_num,commit_num,replace_count,delete_count,insert_count,update_count,all_commits_num
+php,18,76,726,152,726,0,18237
+ruby,35,66,175,120,175,0,75881
+cpp,80,1162,1970,3792,1970,0,469290
+java,112,1115,4084,1768,4084,0,220012
+javascript,160,1340,10938,5837,10938,0,101301
+csharp,256,2601,5895,9575,5895,0,252818

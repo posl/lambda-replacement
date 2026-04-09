@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+f764010a6fb5a9d9c7c15b82287aa579983bf568,src/task.js,1650,1796,538f2756ac1c7b683a1233b5cfefdd08695b026b,src/task.js,1670,1794

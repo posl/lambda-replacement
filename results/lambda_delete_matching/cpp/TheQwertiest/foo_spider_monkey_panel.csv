@@ -1,0 +1,3 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+1ed7bb1b887fc84ab7932fa7ca78d97ac90dc273,foo_spider_monkey_panel/js_objects/global_object.cpp,6220,6842,d6427667d22f26627b6bd4e15fe16f469a15c1b3,foo_spider_monkey_panel/js_objects/global_object.cpp,7026,7282
+f9238700d23021d636dbda18a71b1a848bb4b719,foo_spider_monkey_panel/js_utils/js_error_helper.cpp,1887,2041,19aef56344e212ef70dcabc833238ee100428cf9,foo_spider_monkey_panel/js_utils/js_error_helper.cpp,1917,2038

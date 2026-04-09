@@ -1,0 +1,4 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+1426843663255e1cdaa6b30c948db929102060c9,app/src/main/java/fr/gaulupeau/apps/Poche/tts/TtsFragment.java,7074,7226,d99f03dbabb36719d25ed78f5ca8277cc35ed7aa,app/src/main/java/fr/gaulupeau/apps/Poche/tts/TtsFragment.java,6745,6858
+1426843663255e1cdaa6b30c948db929102060c9,app/src/main/java/fr/gaulupeau/apps/Poche/tts/TtsFragment.java,6835,6981,d99f03dbabb36719d25ed78f5ca8277cc35ed7aa,app/src/main/java/fr/gaulupeau/apps/Poche/tts/TtsFragment.java,6505,6613
+1426843663255e1cdaa6b30c948db929102060c9,app/src/main/java/fr/gaulupeau/apps/Poche/tts/TtsFragment.java,6592,6744,d99f03dbabb36719d25ed78f5ca8277cc35ed7aa,app/src/main/java/fr/gaulupeau/apps/Poche/tts/TtsFragment.java,6265,6376

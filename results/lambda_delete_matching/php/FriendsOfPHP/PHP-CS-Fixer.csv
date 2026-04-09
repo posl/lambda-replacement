@@ -1,0 +1,7 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+287c45b0f49c4e5fecaa26caa3b267bc38efc68b,tests/Cache/FileCacheManagerTest.php,2542,2682,f87756dca974f86dc88ff84be40be044a6f3ff21,tests/Cache/FileCacheManagerTest.php,2581,2661
+287c45b0f49c4e5fecaa26caa3b267bc38efc68b,tests/Cache/FileCacheManagerTest.php,1474,1614,f87756dca974f86dc88ff84be40be044a6f3ff21,tests/Cache/FileCacheManagerTest.php,1513,1593
+287c45b0f49c4e5fecaa26caa3b267bc38efc68b,tests/AutoReview/ProjectCodeTest.php,26680,26790,4a944844d308807d0f7e3fff0cb886adfd54e900,tests/AutoReview/ProjectCodeTest.php,30156,30230
+287c45b0f49c4e5fecaa26caa3b267bc38efc68b,tests/AutoReview/CiConfigurationTest.php,5436,5588,74f6ba0c4d4fbe5a5bea0b8a1e5ae42741cf0c45,tests/AutoReview/CiConfigurationTest.php,5477,5582
+287c45b0f49c4e5fecaa26caa3b267bc38efc68b,tests/AutoReview/CiConfigurationTest.php,5598,5744,507331d92ec8232bb177803053f3a3c76c1c9429,tests/AutoReview/CiConfigurationTest.php,6123,6244
+287c45b0f49c4e5fecaa26caa3b267bc38efc68b,src/DocBlock/Annotation.php,5005,5103,f65e6a20c9ef30f2fc93d8c3e1bf6aa3bd910192,src/DocBlock/Annotation.php,5139,5192

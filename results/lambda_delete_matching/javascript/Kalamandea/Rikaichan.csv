@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+c44cb37ba9c4669a0856cd4c362271b3e20098bd,ext/bg/js/databaseRikai.js,2873,3004,a3f4efd8934b56dadd9dd1a5e637601a330e9f83,ext/bg/js/databaseRikai.js,3912,4029

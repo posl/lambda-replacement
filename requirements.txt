@@ -1,0 +1,10 @@
+ray
+gitpython
+pandas
+tqdm
+
+jupyter
+jpype1
+matplotlib
+tabulate
+seaborn

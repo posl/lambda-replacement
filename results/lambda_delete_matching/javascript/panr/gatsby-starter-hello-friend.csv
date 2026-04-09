@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+b193c4807d906414cc0d9fc402749bce150f84ce,gatsby-config.js,104,1817,caabff3a07500546726e4883138901197222f1a4,gatsby-config.js,121,1817

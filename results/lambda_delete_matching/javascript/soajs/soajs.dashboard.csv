@@ -1,0 +1,12 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+bbc8a0ad59221139a7e9b342e1bcdf84d3d08d7b,test/unit/lib/environment/status.test.js,21816,21948,ec6147494e68b3f1532a901094e3ac0a11d110e1,test/unit/lib/environment/status.test.js,21264,21376
+bbc8a0ad59221139a7e9b342e1bcdf84d3d08d7b,test/unit/lib/environment/status.test.js,21414,21546,ec6147494e68b3f1532a901094e3ac0a11d110e1,test/unit/lib/environment/status.test.js,20862,20974
+bbc8a0ad59221139a7e9b342e1bcdf84d3d08d7b,test/unit/lib/environment/status.test.js,21053,21185,ec6147494e68b3f1532a901094e3ac0a11d110e1,test/unit/lib/environment/status.test.js,20501,20613
+33633a72cb1669295b132d86977c39677c2bd329,lib/cloud/maintenance/index.js,3432,3692,e2e299a0c5e36fc56b9c86c8189a66d1f98d1002,lib/cloud/maintenance/index.js,3551,3717
+33633a72cb1669295b132d86977c39677c2bd329,lib/cloud/deploy/index.js,4619,5221,058fae5ae1c2dd569b312c602945b868381e69e1,lib/cloud/deploy/index.js,4720,5227
+33633a72cb1669295b132d86977c39677c2bd329,lib/cloud/deploy/index.js,7192,7988,058fae5ae1c2dd569b312c602945b868381e69e1,lib/cloud/deploy/index.js,7266,7965
+33633a72cb1669295b132d86977c39677c2bd329,lib/cloud/deploy/index.js,4619,5221,3bf473a3910a84e5f2cac5437aee9f8e852db3d3,lib/cloud/deploy/index.js,42673,43297
+a9a90554ab001bc92085bd1829d55f6cccfe29c5,lib/cloud/deploy/helper.js,23442,23513,b927168ef1d2c81baf8514d6ca6f4dc3ebcee1a5,lib/cloud/deploy/helper.js,23463,23511
+a9a90554ab001bc92085bd1829d55f6cccfe29c5,lib/cloud/deploy/helper.js,23248,23319,b927168ef1d2c81baf8514d6ca6f4dc3ebcee1a5,lib/cloud/deploy/helper.js,23269,23317
+dcd5c9126264b423a9fc638544b52626f26f4478,lib/environment/index.js,17625,18028,660f34cddee93916ce6217ea2e999b334f3ae321,lib/environment/index.js,21874,22182
+83cbc92b9294e3982b58fc1d60007c1c2a61ab93,test/integration/_server.test.js,2180,2290,9b2c5f547bbc25b59c69a22daaf0b41444d4c134,test/integration/_server.test.js,2212,2288

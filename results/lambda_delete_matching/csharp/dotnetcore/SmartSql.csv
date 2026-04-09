@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+703e8fbfd1663911ecab0848f367f737eb573fb3,src/SmartSql.DIExtension/SmartSqlExtensions.cs,293,593,8a4d5d15a34fb8fea077d0843d201318f6d258fa,src/SmartSql.DIExtension/SmartSqlExtensions.cs,538,878

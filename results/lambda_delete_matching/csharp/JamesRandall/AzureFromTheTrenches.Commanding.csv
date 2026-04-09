@@ -1,0 +1,3 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+396b2b818a027bdc331f0084106b436fc352d271,Samples/HttpCommanding.Client/Program.cs,1177,1289,5b502169d052a0e17cf54b3355be16c3d9816613,Samples/HttpCommanding.Client/Program.cs,1588,1650
+591b1f9fef1584dec06571c0ca15978127d06d99,Tests/AccidentalFish.Commanding.Tests.Unit/Implementation/CommandExecuterTests.cs,1736,1853,4882309a3b16c9b598b799ed33c5a9fe3915bfdf,Tests/AccidentalFish.Commanding.Tests.Unit/Implementation/CommandExecuterTests.cs,2985,3058

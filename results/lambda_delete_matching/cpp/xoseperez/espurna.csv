@@ -1,0 +1,5 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+021f0afb86b3340219c1f919695352e104c04720,code/espurna/terminal.cpp,10692,11044,c7a95bf53f51d096e8fdcc53e3d0c7add75d62ae,code/espurna/terminal.cpp,8382,8871
+021f0afb86b3340219c1f919695352e104c04720,code/espurna/terminal.cpp,10692,11044,ef202109e7e09779d44970e065b71f3cb49660b3,code/espurna/terminal.cpp,12477,12597
+cef9547c19757b6268c1c87b50d80620a68f2f79,code/espurna/relay.cpp,44779,45414,d788e04616c515e00b0105cfb427bc53b143d6b8,code/espurna/relay.cpp,58507,58619
+d788e04616c515e00b0105cfb427bc53b143d6b8,code/espurna/relay.cpp,60942,61385,3d580f35774e1d547e4127723e54881c26e94e09,code/espurna/relay.cpp,73409,74098

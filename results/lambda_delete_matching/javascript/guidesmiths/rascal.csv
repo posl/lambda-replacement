@@ -1,0 +1,6 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+1252ca7a4f833129275591b9f399ab136262bcb7,test/subscriptions.tests.js,50132,50202,84108dcb823eaa431fb597a771b86987b921ed84,test/subscriptions.tests.js,66149,66213
+1252ca7a4f833129275591b9f399ab136262bcb7,test/broker.tests.js,7259,7305,84108dcb823eaa431fb597a771b86987b921ed84,test/broker.tests.js,7814,7822
+1252ca7a4f833129275591b9f399ab136262bcb7,lib/amqp/Vhost.js,10621,10783,39541642020c3b3465cf57daec9b0c83b6f51944,lib/amqp/Vhost.js,10652,10781
+1252ca7a4f833129275591b9f399ab136262bcb7,lib/amqp/Subscription.js,12487,12798,7e6264486e7bb9f4968dc025d8b7da4e17f4251e,lib/amqp/Subscription.js,13138,13411
+1252ca7a4f833129275591b9f399ab136262bcb7,lib/amqp/SubscriberSession.js,3864,4026,84108dcb823eaa431fb597a771b86987b921ed84,lib/amqp/SubscriberSession.js,4077,4204

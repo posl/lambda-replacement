@@ -1,0 +1,4 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+b332b78f47996ee40e2ed263b9374ad0e2663286,Minio/Helper/OperationsHelper.cs,3615,3896,ffd8a53b9fff417a03716fe677693cd78bbe0324,Minio/Helper/OperationsHelper.cs,3853,4208
+b332b78f47996ee40e2ed263b9374ad0e2663286,Minio/Credentials/CertificateIdentityProvider.cs,3654,3734,a29f4b14fb4071026a1267d1987f6b8dd7b6fc6d,Minio/Credentials/CertificateIdentityProvider.cs,3678,3739
+b332b78f47996ee40e2ed263b9374ad0e2663286,Minio.Functional.Tests/FunctionalTest.cs,205966,206263,d82a4590bc40fd1c0f084aaa14809d32e3e924e2,Minio.Functional.Tests/FunctionalTest.cs,214802,215137

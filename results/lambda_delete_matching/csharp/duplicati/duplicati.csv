@@ -1,0 +1,5 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+0cf41f8b17c26293b8bdd0b5b0962284d23c5713,Duplicati/Library/Backend/OneDrive/OneDrive.cs,3754,3918,4a299c850056ae7dfd77730eec240a64e29de081,Duplicati/Library/Backend/OneDrive/OneDrive.cs,4272,4375
+b3a3911d98c8e4c4f99a16fd2d531f8e58952b83,Duplicati/Library/Backend/FTP/FTPBackend.cs,8841,9074,470b83c4162aac8441a27549c5f437c844b6e158,Duplicati/Library/Backend/FTP/FTPBackend.cs,8602,8621
+c7bde590dc3b37427094a908fa28889a437c3364,Duplicati/GUI/Duplicati.GUI.TrayIcon/TrayIconBase.cs,2530,2590,279a0d3ee1a7e0ea9374a0e3f77a2568256a461d,Duplicati/GUI/Duplicati.GUI.TrayIcon/TrayIconBase.cs,2540,2588
+b6ed72bd6c568f27efda4f5e1164703962c8f4da,Duplicati/Library/Main/Operation/RestoreHandler.cs,17900,18040,5625c4c1cef8322806d3e0fc981899363f547ecf,Duplicati/Library/Main/Operation/RestoreHandler.cs,18042,18115

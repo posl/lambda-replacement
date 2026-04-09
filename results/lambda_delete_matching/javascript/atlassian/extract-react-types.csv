@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+3299e3aac5324ae0f3e0c2f345cfe9b7cc6ea44f,packages/extract-react-types/index.js,4426,6050,277b0bed67163f17b9ea6caa7d26e584ec0f1ea1,packages/extract-react-types/index.js,4664,5848

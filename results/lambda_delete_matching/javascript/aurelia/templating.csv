@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+b8e51df0c2d94254172eca53b66031a37664bc91,src/composition-transaction.js,2206,2315,09f719c4df6b3c028e2d9306a9af92c91c8699e3,src/composition-transaction.js,1519,1662

@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+37b4f864f9c66e569546f55b8e3c495b187a53f5,vertx-mail-client/src/test/java/io/vertx/ext/mail/impl/SMTPConnectionPoolDummySMTPTest.java,1625,1659,11ea6338a0f44dfa4c47197112b334f50283b6d2,vertx-mail-client/src/test/java/io/vertx/ext/mail/impl/SMTPConnectionPoolDummySMTPTest.java,1636,1657

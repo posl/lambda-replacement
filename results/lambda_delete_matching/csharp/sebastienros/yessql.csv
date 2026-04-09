@@ -1,0 +1,6 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+c905f7d2e39a0676c6de51883f08e00af3275a19,src/YesSql.Core/Services/Store.cs,6493,6601,3cdb9765e7bd2f70d9dd56138e41e835abf19b92,src/YesSql.Core/Services/Store.cs,6544,6599
+b2f85e848850c172fc0f93ce570e1567b8eeaad5,src/YesSql.Core/Store.cs,9569,9662,0eb110f0455b037404588e4708b48aa591a47019,src/YesSql.Core/Store.cs,8286,8339
+2979ec94464878002c8ca8c8d50dcedf233266d9,src/YesSql.Core/Session.cs,6271,6395,950e9a54d15f4a1c14f58b730671251501937f65,src/YesSql.Core/Session.cs,8428,8506
+f303853f380aabb98edaf50a64dacdf0ac6d7a57,src/YesSql.Core/Session.cs,12499,13080,950e9a54d15f4a1c14f58b730671251501937f65,src/YesSql.Core/Session.cs,8428,8506
+e44959db34d294b9ad174d25a4e1e1213c81acf1,test/YesSql.Tests/CoreTests.cs,6527,6687,598b8740ade4ad2f8c698e72541d92f35e38c588,test/YesSql.Tests/CoreTests.cs,9148,9217

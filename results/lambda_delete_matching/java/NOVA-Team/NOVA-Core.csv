@@ -1,0 +1,4 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+d8ed02faaf078618097b3d68068e6490637c41df,src/main/java/nova/core/gui/GuiComponent.java,2296,2397,ca067203b83827562e6708d8f3aacd8dd26493b7,src/main/java/nova/core/gui/GuiComponent.java,1845,1895
+f5d41683683746f8cf82aecf279e5fd2f6054429,src/main/java/nova/core/block/component/BlockProperties.java,1815,1907,ee48c59943802dffa041b5a52bbdae22916d3220,src/main/java/nova/core/block/component/BlockProperties.java,1862,1904
+547d3781082b18179d6ae67b66da13152b84605b,minecraft/1.11.2/src/main/java/nova/core/wrapper/mc/forge/v1_11_2/wrapper/item/forward/IFWItem.java,2012,2127,cf28661e2f2ceec2c2bc42e9d065c98a21b7f292,minecraft/1.11.2/src/main/java/nova/core/wrapper/mc/forge/v1_11_2/wrapper/item/forward/IFWItem.java,2081,2125

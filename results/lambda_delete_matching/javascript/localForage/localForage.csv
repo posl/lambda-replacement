@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+44194a81b92664d651fb8855aae86c7af3ce7412,src/localforage.js,7453,8073,7e161cca430b279cc641bd115f20ba7db5c7a034,src/localforage.js,7671,8243

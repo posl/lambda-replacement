@@ -1,0 +1,3 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+42ff7e4335ddb2b296a867cb7e79253aa659966a,src/GitVersionCore/GitVersionCache.cs,4500,4631,14541480bbad995aec5ee5ac9885bb4eb94c80bd,src/GitVersionCore/GitVersionCache.cs,4883,5009
+a2299d023cb2576df6aa990e2805d8ad3396b776,src/GitVersion.Core/Configuration/Init/SetConfig/ConfigureBranches.cs,1166,1274,6401cd49bbe432cdcfefef5b49db2e0877e0a6e8,src/GitVersion.Core/Configuration/Init/SetConfig/ConfigureBranches.cs,1215,1272

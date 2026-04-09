@@ -1,0 +1,4 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+3e012f9e786250298cc3513bc850be6faf8ee168,test/AsyncFileTest.php,1700,1750,742d9303d0446e7485c88a24d00e2956afc03b37,test/AsyncFileTest.php,1718,1748
+3e012f9e786250298cc3513bc850be6faf8ee168,test/AsyncFileTest.php,1250,1299,742d9303d0446e7485c88a24d00e2956afc03b37,test/AsyncFileTest.php,1268,1297
+3e012f9e786250298cc3513bc850be6faf8ee168,test/AsyncFileTest.php,821,865,b2b263092e9e6fb86e36f3fdb716c0a4e426a2af,test/AsyncFileTest.php,859,883

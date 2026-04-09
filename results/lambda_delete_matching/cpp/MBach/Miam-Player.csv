@@ -1,0 +1,7 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+90412029b6024e912788be4ecfd99c719094ea1e,code/MiamPlayer/playlists/tabplaylist.cpp,1196,2140,eb4025559c6607ef6b9acb7def16df27785e2444,code/MiamPlayer/playlists/tabplaylist.cpp,1089,1144
+8f3711e8641bff5052bfab14861ab64709a9e7ac,code/MiamPlayer/playlists/tabplaylist.cpp,6686,6951,4d92412ac0c4ba5a648ef371f8419859f2783516,code/MiamPlayer/playlists/tabplaylist.cpp,7672,7738
+d237c958d2d500f6ca9aaa8425a29eebb4f21acd,code/MiamPlayer/mainwindow.cpp,18000,18851,bd8f8bc4efe160e1c57fb0d7a4fb2621e1a635dc,code/MiamPlayer/mainwindow.cpp,21170,21290
+61ab79ac93bc565beb343e415365d2ba376e131f,code/MiamPlayer/playlists/tabplaylist.cpp,697,806,72f187e0afc2e66dbef190c79c5b55bb92e78dc1,code/MiamPlayer/playlists/tabplaylist.cpp,936,998
+e5bfa005bf200dca2a7149a52f425d56e365eb3c,code/MiamPlayer/mainwindow.cpp,14472,15095,72f187e0afc2e66dbef190c79c5b55bb92e78dc1,code/MiamPlayer/mainwindow.cpp,14406,15099
+114f8b48041f3e10669c637044598e5948c66fa9,code/MiamPlayer/mainwindow.cpp,8143,8344,9d072f15b21cbab017105253331d333b06b429f7,code/MiamPlayer/mainwindow.cpp,8403,8662

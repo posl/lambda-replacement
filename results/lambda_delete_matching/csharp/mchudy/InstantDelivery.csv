@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+8bfe406679fe5ee4a904ec98dae9a5bda78117c2,InstantDelivery.ViewModel/ViewModels/PackagesViewModels/PackageEditViewModel.cs,467,572,5346a27d4917aaa2c9557fb2784d299500bd7556,InstantDelivery.ViewModel/ViewModels/PackagesViewModels/PackageEditViewModel.cs,994,1082

@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+011a4a9b1d58896c3b460a456d80f2d15fddb039,test/test.js,2146,2182,3670c8748d1f7ac9e376193bc464ed6d0d4714c7,test/test.js,2157,2180

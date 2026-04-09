@@ -1,0 +1,3 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+731f92aaf0994fc148c4b4ed748eeb3891d7af34,NinjaNye.SearchExtensions/Helpers/ExpressionBuilders/EnumerableExpressionHelper.cs,11579,11705,42bec55da176be9442ae7fd4ae9340b69e6b92b9,NinjaNye.SearchExtensions/Helpers/ExpressionBuilders/EnumerableExpressionHelper.cs,11610,11703
+731f92aaf0994fc148c4b4ed748eeb3891d7af34,NinjaNye.SearchExtensions/Helpers/ExpressionBuilders/EnumerableExpressionHelper.cs,10890,11103,42bec55da176be9442ae7fd4ae9340b69e6b92b9,NinjaNye.SearchExtensions/Helpers/ExpressionBuilders/EnumerableExpressionHelper.cs,10975,11101

@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+c2f6d5da6a656821c7857317644f3ecd35660bae,navigation/src/main/java/com/navigation/androidx/AwesomeFragment.java,10576,10665,bad84087ad3b32175d482b35ce2344f6b8dd2555,navigation/src/main/java/com/navigation/androidx/AwesomeFragment.java,10607,10663

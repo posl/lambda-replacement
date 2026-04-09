@@ -1,0 +1,3 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+eb1884ea62bde7a263908440de2556dc0da63309,Liquid.NET/src/Filters/Strings/AppendFilter.cs,671,747,797727a8cd677b94cda83121dce0a4638708f4f8,Liquid.NET/src/Filters/Strings/AppendFilter.cs,801,832
+eb1884ea62bde7a263908440de2556dc0da63309,Liquid.NET/src/Filters/Strings/UpCaseFilter.cs,276,337,3f10c3eb157c8daed8914fa8fc685e0d6aa1d389,Liquid.NET/src/Filters/Strings/UpCaseFilter.cs,406,422

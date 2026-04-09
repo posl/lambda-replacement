@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+34e2767f7f7665b852077bbeefdc67362ae717c1,spec/client_spec.rb,655,693,06591fa3ccaeca923ed5a31432ccde0f249a630e,spec/client_spec.rb,655,670

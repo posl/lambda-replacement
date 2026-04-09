@@ -1,0 +1,13 @@
+.DS_Store
+__pycache__
+.venv/
+.env
+target/
+data/libraries-1.6.0-2020-01-12*
+data/pickle/libraries_io
+data/repositories
+data/rq4/source_codes
+logs
+
+
+memo.md

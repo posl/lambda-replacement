@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+a63e68ca45c5b912772f6cbe0a48108a78f3c0d3,DirectXTK/Src/SpriteFont.cpp,11862,12589,9e76208b1f282d559f8747122cd2abe246111932,DirectXTK/Src/SpriteFont.cpp,13481,14189

@@ -1,0 +1,6 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+12e5799c4954cabdcb4b1703b4f9106922a89b73,test/controllers/CountryOperationsTest.java,2306,2465,77b7f40bf0babb0cf2eb24ece1b45edd6b1a64a5,test/controllers/CountryOperationsTest.java,2210,2269
+408e8a1e7d80ab57a6fde63605312641f64be8fc,common/app/common/templates/CustomI18nHelper.java,1175,1362,0055b0c918008b197366bc3d084cabe05663c3c2,common/app/common/templates/CustomI18nHelper.java,1300,1383
+408e8a1e7d80ab57a6fde63605312641f64be8fc,common/app/common/templates/CustomI18nHelper.java,1175,1362,253b834f64e76d7bc7b5abd1c739b48326dfe640,common/app/common/templates/CustomI18nHelper.java,1206,1310
+e4b42328e288b9fe05a951996996b9217324b6c6,common/app/common/templates/CustomI18nHelper.java,1117,1312,253b834f64e76d7bc7b5abd1c739b48326dfe640,common/app/common/templates/CustomI18nHelper.java,1206,1310
+b6c6e4b4976734349a54ef368142a04520c245b5,product-catalog/app/com/commercetools/sunrise/productcatalog/home/SunriseHomeController.java,2346,2502,bc948c46cffdcb2ef388f5cff9b42c6b8280be1a,product-catalog/app/com/commercetools/sunrise/productcatalog/home/SunriseHomeController.java,2045,2173

@@ -1,0 +1,4 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+4ebeb3b5d8359a02b8f8ed1ab415c8b5aefcd0c2,app/models/project.rb,3568,3612,2ae53f80068bc9361f06ac753001c1bcded54b0f,app/models/project.rb,2967,2996
+af1011b65183fb9e2806d70cf18fc535bcb2c59d,app/models/backer.rb,1812,1937,5e8cd2b5580855bed0f2922775a20d59543e4687,app/models/backer.rb,1773,1869
+af1011b65183fb9e2806d70cf18fc535bcb2c59d,app/models/backer.rb,1710,1809,5e8cd2b5580855bed0f2922775a20d59543e4687,app/models/backer.rb,1669,1741

@@ -1,0 +1,9 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+ab2e528aa8c52283bff4db164a14d6cb382e78ee,app/imports/ui/components/queueList/taQueueList.js,2105,2202,dde8500daa5c49f9c680fd17746faf8684289993,app/imports/ui/components/queueList/taQueueList.js,2169,2230
+ab2e528aa8c52283bff4db164a14d6cb382e78ee,app/imports/ui/components/modals/joinQueueModal/joinQueueModal.js,348,1493,dde8500daa5c49f9c680fd17746faf8684289993,app/imports/ui/components/modals/joinQueueModal/joinQueueModal.js,416,1524
+ab2e528aa8c52283bff4db164a14d6cb382e78ee,app/imports/ui/components/modals/createQueueModal/createQueueModal.js,452,853,dde8500daa5c49f9c680fd17746faf8684289993,app/imports/ui/components/modals/createQueueModal/createQueueModal.js,524,886
+ab2e528aa8c52283bff4db164a14d6cb382e78ee,app/imports/ui/components/modals/editQueueModal/editQueueModal.js,460,958,dde8500daa5c49f9c680fd17746faf8684289993,app/imports/ui/components/modals/editQueueModal/editQueueModal.js,528,989
+ab2e528aa8c52283bff4db164a14d6cb382e78ee,app/imports/ui/components/queueCard/queueCard.js,665,766,dde8500daa5c49f9c680fd17746faf8684289993,app/imports/ui/components/queueCard/queueCard.js,702,764
+ab2e528aa8c52283bff4db164a14d6cb382e78ee,app/imports/ui/components/courseSettings/courseSettings.js,1867,1954,dde8500daa5c49f9c680fd17746faf8684289993,app/imports/ui/components/courseSettings/courseSettings.js,1894,1952
+3e55a55d7865776a53dd1e34b36d8a1304ef44de,imports/ui/pages/privacy/privacy.js,73,159,364cebe34501dbfdf03db17007cec98d5e8b8c42,imports/ui/pages/privacy/privacy.js,140,245
+ab2e528aa8c52283bff4db164a14d6cb382e78ee,app/imports/ui/components/courseSettings/courseSettings.js,491,715,dde8500daa5c49f9c680fd17746faf8684289993,app/imports/ui/components/courseSettings/courseSettings.js,526,713

@@ -1,0 +1,12 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+852337e51f0df03fec85f955aa6b4e9833b3bd00,lib/winston/transports/file.js,9638,9686,e61f84425204ed5788cfe17d96e19c855bb8b199,lib/winston/transports/file.js,8766,8791
+852337e51f0df03fec85f955aa6b4e9833b3bd00,lib/winston/transports/file.js,4490,4530,e61f84425204ed5788cfe17d96e19c855bb8b199,lib/winston/transports/file.js,4408,4430
+852337e51f0df03fec85f955aa6b4e9833b3bd00,lib/winston/transports/file.js,11905,11992,e61f84425204ed5788cfe17d96e19c855bb8b199,lib/winston/transports/file.js,10315,10379
+852337e51f0df03fec85f955aa6b4e9833b3bd00,lib/winston/transports/file.js,11593,11648,e61f84425204ed5788cfe17d96e19c855bb8b199,lib/winston/transports/file.js,10012,10029
+852337e51f0df03fec85f955aa6b4e9833b3bd00,lib/winston/transports/file.js,10078,10240,e61f84425204ed5788cfe17d96e19c855bb8b199,lib/winston/transports/file.js,9162,9240
+852337e51f0df03fec85f955aa6b4e9833b3bd00,lib/winston/transports/file.js,8590,8812,e61f84425204ed5788cfe17d96e19c855bb8b199,lib/winston/transports/file.js,7907,8087
+820ae8c4331129ef9814ef69f72387aa22c2d9c4,lib/winston/create-logger.js,1368,1964,ce7c951b3da38aaf149828688d60fb5c4d3277f5,lib/winston/create-logger.js,972,2407
+852337e51f0df03fec85f955aa6b4e9833b3bd00,lib/winston/create-logger.js,939,2030,6da46de284c135e613217378c65c5763318aba4d,lib/winston/create-logger.js,972,2078
+852337e51f0df03fec85f955aa6b4e9833b3bd00,lib/winston/create-logger.js,2253,2373,ce7c951b3da38aaf149828688d60fb5c4d3277f5,lib/winston/create-logger.js,2773,2844
+852337e51f0df03fec85f955aa6b4e9833b3bd00,lib/winston/create-logger.js,939,2030,ce7c951b3da38aaf149828688d60fb5c4d3277f5,lib/winston/create-logger.js,972,2407
+852337e51f0df03fec85f955aa6b4e9833b3bd00,lib/winston/exception-handler.js,1340,1459,e61f84425204ed5788cfe17d96e19c855bb8b199,lib/winston/exception-handler.js,878,1027

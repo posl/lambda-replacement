@@ -1,0 +1,5 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+f9dea8bb12e3cd92f62241b1154658ca33fc5d4e,Resonance.Core/EventConsumer.cs,2185,2285,a308d68836f9bf8cffd8bb2acbcc69199d791068,Resonance.Core/EventConsumer.cs,4008,4058
+f9dea8bb12e3cd92f62241b1154658ca33fc5d4e,Resonance.Core/EventPublisher.cs,7089,7179,a308d68836f9bf8cffd8bb2acbcc69199d791068,Resonance.Core/EventPublisher.cs,9935,9977
+f9dea8bb12e3cd92f62241b1154658ca33fc5d4e,Resonance.Core/Repo/Database/DbEventingRepo.cs,24400,24533,5da891bb3b3e1157a8f56e3d2fa3957427ffc23c,Resonance.Core/Repo/Database/DbEventingRepo.cs,24894,24947
+931daf932c70e83ac625041a343a963459c6f4a3,Resonance.Core/EventConsumptionWorker.cs,8999,9088,211d285d0241d15079ecd3e80666002a1d3cf513,Resonance.Core/EventConsumptionWorker.cs,10795,10855

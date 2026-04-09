@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+51800cc3236d760b722a096ef1dd521ffac3423f,src/main/java/sc/iview/SciView.java,23547,23906,4347e4ed2ab51a29ecb16734b3e31063e875785e,src/main/java/sc/iview/SciView.java,23434,23764

@@ -1,0 +1,4 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+b91eea5b2959c6e28ddd4af1aa07034e4bd0b8cf,spec/unit/intent.spec.js,11378,11516,eecc972b005558aaa1ee65a70ba30aa5dc77c81d,spec/unit/intent.spec.js,11762,11868
+151a9dfd4d0514358b1636914d944c4e334b1660,spec/integ/bridge.spec.js,3444,4122,eecc972b005558aaa1ee65a70ba30aa5dc77c81d,spec/integ/bridge.spec.js,4136,4173
+b91eea5b2959c6e28ddd4af1aa07034e4bd0b8cf,spec/integ/bridge.spec.js,19978,20122,ffa719aec7e92f607c1819bf412bd95195bd5e70,spec/integ/bridge.spec.js,27387,27496

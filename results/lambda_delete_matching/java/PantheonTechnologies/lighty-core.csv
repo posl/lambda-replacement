@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+473ea7810698849817e38526768de3eae17e0bea,lighty-core/lighty-codecs/src/main/java/io/lighty/codecs/DataCodec.java,4815,5057,85f27b4e65bcc63be990589992fc8e8096a87d64,lighty-core/lighty-codecs/src/main/java/io/lighty/codecs/DataCodec.java,4875,4928

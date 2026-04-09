@@ -1,0 +1,7 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+02c06b20cfa59a7871f91fdb39c93e3557d3cf12,SolrNet/SolrMultipleCriteriaQuery.cs,247,303,baeb72ce6008c466437d4431ff7d2890ce29145d,SolrNet/SolrMultipleCriteriaQuery.cs,2742,2762
+1d7909916d88c749383f52021bb2514405d0710b,SolrNet.Tests/SolrQueryExecuterTests.cs,6167,6787,ee56b02c913a9b52459cefe1cc1623cc254d5f3b,SolrNet.Tests/SolrQueryExecuterTests.cs,5660,5961
+bc6d59d56f04dca7d49d9c0db009a653e81318e7,SolrNet.Tests/SolrOperationsTests.cs,4768,5206,db271ce8b0a37f73832dda0750be6a49cfc65934,SolrNet.Tests/SolrOperationsTests.cs,14971,15677
+9e3fb0b0299ec2b9a67e473ed5a3176eaea6d26e,SolrNet.Tests/SolrOperationsTests.cs,12216,12302,db271ce8b0a37f73832dda0750be6a49cfc65934,SolrNet.Tests/SolrOperationsTests.cs,18284,18493
+68cdbef08f7819b50b65b1f6548f8984feef51ff,SolrNet/Impl/ResponseParsers/FacetsResponseParser.cs,6700,6798,76ed7f655e229663f3d989e50f49fe7aa4ba766c,SolrNet/Impl/ResponseParsers/FacetsResponseParser.cs,6741,6790
+94505a6763aa5bef1818486040c4609ab1589876,SolrNet/Utils/Container.cs,5553,5623,b7712b77557e92347708859c9b694a308429f21b,SolrNet/Utils/Container.cs,5823,5868

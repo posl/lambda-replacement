@@ -1,0 +1,7 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+f8c61140c0b7a827e8f75f337cd4290ab257ac48,code/components/citizen-server-impl/src/EndPointIdentityProvider.cpp,3248,3476,11cfad4dd0f4ae854306cb052774b12f71dbe886,code/components/citizen-server-impl/src/EndPointIdentityProvider.cpp,3290,3501
+f3c9dac9537b0853d1a1cdb002c79183dd62ce42,code/components/rage-graphics-rdr3/src/GfxSpec.cpp,13225,13567,5724e1fc1473c37cc6928933733b03d145594954,code/components/rage-graphics-rdr3/src/GfxSpec.cpp,13295,13565
+e9ea3a511d4d1d7e733651239ad4dcd4c04fb7a3,code/components/citizen-server-impl/src/state/ServerGameState.cpp,111075,111594,e42842255977b292302b8d579ec6b25ac806dcf1,code/components/citizen-server-impl/src/state/ServerGameState.cpp,110621,110961
+e42842255977b292302b8d579ec6b25ac806dcf1,code/components/citizen-server-impl/src/state/ServerGameState.cpp,110619,110966,638a776170cf0f11837de250571058b3b010a41a,code/components/citizen-server-impl/src/state/ServerGameState.cpp,112005,112118
+906fd942098bd46e95c49eb3c1a7e9fb6388780d,code/client/citicore/FileMapping.Win32.cpp,5218,5357,c8534134ca5dc7bade3eb406997239b55a0ff231,code/client/citicore/FileMapping.Win32.cpp,2113,2664
+a8ba095cf7f94aea97794da02139d1eda277741a,code/components/citizen-devtools/src/ResourceMonitor.cpp,7043,7149,704c60c445e8fa8b8f9658aef8fa436520996a28,code/components/citizen-devtools/src/ResourceMonitor.cpp,8044,8092

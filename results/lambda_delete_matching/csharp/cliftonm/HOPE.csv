@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+06ceff4574d41ed0024195a3b68d286fc9931255,Receptors/ThumbnailCreatorReceptor/ReceptorDefinition.cs,1394,1472,1c039971e89b2e6819444402b74f7019bc9107cc,Receptors/ThumbnailCreatorReceptor/ReceptorDefinition.cs,1387,1415

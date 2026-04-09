@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+f26fd645cd910cc0f047727dcbb4a681dbca17ac,Kitodo-DataManagement/src/test/java/org/kitodo/data/elasticsearch/search/SearcherIT.java,3178,3413,6b86cbd998ef2dedd11e5ea458a1764bec0821dc,Kitodo-DataManagement/src/test/java/org/kitodo/data/elasticsearch/search/SearcherIT.java,3213,3411

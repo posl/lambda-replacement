@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+f3e8d507082928520ee9d876ec466cf159ee38fe,client/vasum-client-impl.cpp,10320,10744,d8fa598081d29556dcaaca00a1a67084d47cdce7,client/vasum-client-impl.cpp,10532,10944

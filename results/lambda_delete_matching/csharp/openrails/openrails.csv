@@ -1,0 +1,3 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+021a2a635626b7c7ba09ea1a2893266b222e1dd0,Source/RunActivity/RollingStock/TrainControlSystem.cs,13485,13604,537214d61aacc637254915299a4bc6dbacb49870,Source/RunActivity/RollingStock/TrainControlSystem.cs,13767,13852
+bdfcd3eee3373a17e23bcbcd909c1b99aec858b9,Source/Menu/Notifications/NotificationManager.cs,7752,7813,6cf527236a219214161a63301a9058a0fc5bc1d9,Source/Menu/Notifications/NotificationManager.cs,8603,8636

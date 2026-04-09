@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+faa06edffb9cdb284ff0fb31f62c900a5cb77ae5,Spectabis-WPF/Domain/Scraping/Api/IGDB.cs,1530,1858,7bfa55aef87d831ff1d4f3bb3d271f14af4c14f1,Spectabis-WPF/Domain/Scraping/Api/IGDB.cs,1255,1522

@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+085f6b25729324164b1a661e5a5ad7bb17ee5ca6,src/ccmain/paragraphs.cpp,44839,45095,deec8ef46fbf2feefb792b4e8eaeff8f63d487ad,src/ccmain/paragraphs.cpp,44838,44953

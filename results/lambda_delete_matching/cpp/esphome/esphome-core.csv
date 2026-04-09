@@ -1,0 +1,7 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+935080af7f2b8ff470f8afd2285bd697fdc4ef8b,src/esphomelib/input/adc_component.cpp,866,1328,ab027bd0f5cac2fa85bc6fd8bd23d47bb7b76cc2,src/esphomelib/input/adc_component.cpp,937,998
+48aa415313b318213e045d4206ad8f9eca4269c4,src/esphomelib/binary_sensor/mqtt_binary_sensor_component.cpp,425,627,fb3fe36137c51b8412bb6aa97f505b131f34d32f,src/esphomelib/binary_sensor/mqtt_binary_sensor_component.cpp,741,940
+48aa415313b318213e045d4206ad8f9eca4269c4,src/esphomelib/binary_sensor/mqtt_binary_sensor_component.cpp,425,627,93da6cd739ed5641649d2b059cc384cf082ab8b3,src/esphomelib/binary_sensor/mqtt_binary_sensor_component.cpp,708,764
+3d76042dc3189ec4ffca376927a5990805424423,src/esphomelib/switch_/mqtt_switch_component.cpp,649,1442,46ed3b7e47c2958bbb2e3ec1bcc60b450023844f,src/esphomelib/switch_/mqtt_switch_component.cpp,791,1418
+fb3fe36137c51b8412bb6aa97f505b131f34d32f,src/esphomelib/binary_sensor/mqtt_binary_sensor_component.cpp,697,799,93da6cd739ed5641649d2b059cc384cf082ab8b3,src/esphomelib/binary_sensor/mqtt_binary_sensor_component.cpp,708,764
+4b6534b6a9cfbc06e90e201103bad0e940073e13,src/esphomelib/switch_/mqtt_switch_component.cpp,748,1420,46ed3b7e47c2958bbb2e3ec1bcc60b450023844f,src/esphomelib/switch_/mqtt_switch_component.cpp,791,1418

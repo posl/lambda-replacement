@@ -1,0 +1,3 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+c6a7ea1e6e8681f83065e79f53697d94736cecf4,tests/extensions/Wyam.Markdown.Tests/MarkdownFixture.cs,8963,9050,62a9dafe23b5ef6b88487fff0458e6abefb501e9,tests/extensions/Wyam.Markdown.Tests/MarkdownFixture.cs,11215,11237
+c6a7ea1e6e8681f83065e79f53697d94736cecf4,tests/extensions/Wyam.Markdown.Tests/MarkdownFixture.cs,8059,8145,62a9dafe23b5ef6b88487fff0458e6abefb501e9,tests/extensions/Wyam.Markdown.Tests/MarkdownFixture.cs,10311,10332

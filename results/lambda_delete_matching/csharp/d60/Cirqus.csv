@@ -1,0 +1,4 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+1743b565c1c73470876b6d848e86af6a72f9ca49,d60.Cirqus/Exceptions/ConcurrencyException.cs,930,1052,cff630b8fefbbe2817f224e4525a54c8cb63aaec,d60.Cirqus/Exceptions/ConcurrencyException.cs,1062,1077
+c7e6cd6227c3104f5e28b371cd5b113bf17a4158,d60.Cirqus.Testing/CirqusTestsHarness.cs,1980,2081,58d905c9c916d847873c72ce8a038d125ca63f48,d60.Cirqus.Testing/CirqusTestsHarness.cs,2008,2040
+c7e6cd6227c3104f5e28b371cd5b113bf17a4158,d60.Cirqus.Testing/CirqusTestsHarness.cs,1980,2081,dc0faf4fe28ea15161eecbbe667db5384a01872e,d60.Cirqus.Testing/CirqusTestsHarness.cs,2962,2991

@@ -1,0 +1,5 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+b851459741d8f001a3b35318ba87fe8dc832a76b,src/Binance/Api/WebSocket/BinanceWebSocketClient.cs,3396,3505,6ef046bf445e68e459f6472385768d1c47c37eab,src/Binance/Api/WebSocket/BinanceWebSocketClient.cs,3270,3307
+b851459741d8f001a3b35318ba87fe8dc832a76b,src/Binance/Api/WebSocket/BinanceWebSocketClient.cs,3396,3505,b24271cb866e4b3535f5cad8022a96f1b86797a1,src/Binance/Api/WebSocket/BinanceWebSocketClient.cs,3270,3307
+77d610d386ebd9002effffacc8aba65907bacaec,src/Binance/Api/BinanceApi.cs,20541,20797,eaeb56f5e71993b541853b182ce8c589fda73ca8,src/Binance/Api/BinanceApi.cs,21892,22082
+77d610d386ebd9002effffacc8aba65907bacaec,src/Binance/Api/BinanceApi.cs,19696,19952,eaeb56f5e71993b541853b182ce8c589fda73ca8,src/Binance/Api/BinanceApi.cs,21047,21237

@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+47d70f88065e96320748d4b7c594a9ad3901e127,Reloader/Xamarin.Forms.HotReload.Reloader/HotReloader.cs,4556,4646,697627210c1301bc9cd546cb6fe2b1dd7828a0f7,Reloader/Xamarin.Forms.HotReload.Reloader/HotReloader.cs,4588,4644

@@ -1,0 +1,5 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+d5d11a2eb568c6ff076bf2e55b74fe8df8474559,URF.Core.EF.Trackable/TrackableRepository.cs,1181,1259,d3c22947ce899c8fd99bd4ed21294b35a7a752b4,URF.Core.EF.Trackable/TrackableRepository.cs,1199,1243
+d5d11a2eb568c6ff076bf2e55b74fe8df8474559,URF.Core.EF.Trackable/TrackableRepository.cs,784,919,d3c22947ce899c8fd99bd4ed21294b35a7a752b4,URF.Core.EF.Trackable/TrackableRepository.cs,861,905
+d5d11a2eb568c6ff076bf2e55b74fe8df8474559,URF.Core.EF.Trackable/TrackableRepository.cs,495,628,d3c22947ce899c8fd99bd4ed21294b35a7a752b4,URF.Core.EF.Trackable/TrackableRepository.cs,576,618
+d5d11a2eb568c6ff076bf2e55b74fe8df8474559,URF.Core.EF.Trackable/TrackableRepository.cs,638,774,d3c22947ce899c8fd99bd4ed21294b35a7a752b4,URF.Core.EF.Trackable/TrackableRepository.cs,717,762

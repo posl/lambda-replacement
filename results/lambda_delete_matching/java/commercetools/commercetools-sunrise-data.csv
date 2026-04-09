@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+4f16ae737d2f28dc7695e15a03f16a7bf9398cfb,importApp/src/test/java/com/commercetools/dataimport/joyrideavailability/AvailabilityPricesImportJobIntegrationTest.java,2642,3569,0be7add638b38be46a07e80c35e5b8b868f5cc5c,importApp/src/test/java/com/commercetools/dataimport/joyrideavailability/AvailabilityPricesImportJobIntegrationTest.java,2730,3613

@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+aa70e077911419f8db4c89bbb267ca3161f8d319,api/python/Abstract/objects/pyParser.cpp,1285,2085,2a10494b8a5427a9e6316d1cd97af49cb00a3e6a,api/python/Abstract/objects/pyParser.cpp,3255,4052

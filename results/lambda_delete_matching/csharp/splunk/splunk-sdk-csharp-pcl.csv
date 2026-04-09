@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+74cae0df84bc4e0feef42258dd3455ea5ccf58bb,src/Splunk.ModularInputs/Splunk/ModularInputs/ModularInput.cs,4193,4287,0f521bcd137b8729ffe105ca1f699c144b242c32,src/Splunk.ModularInputs/Splunk/ModularInputs/ModularInput.cs,4350,4437

@@ -1,0 +1,3 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+ff12451d9a4d90dfce88e9a38bb9e8d4e4f865bb,ReClass.NET/Plugins/PluginManager.cs,2124,2158,7067f0e28249da7605c67bbeacff83680a022c09,ReClass.NET/Plugins/PluginManager.cs,2372,2388
+542731481fed1c2792a93d6d697046a42da4ab74,ReClass.NET/UI/MemoryViewControl.cs,17917,18074,335d254ec2e6cfbdd705d570d85afff641fbdc7d,ReClass.NET/UI/MemoryViewControl.cs,29326,29512

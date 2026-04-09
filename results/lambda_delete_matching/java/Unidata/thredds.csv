@@ -1,0 +1,5 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+f418f2c9c9fdb4a8059a401ab93c20d0c527b559,ui/src/main/java/ucar/nc2/ui/ToolsUI.java,123607,124113,5f1b6c4c9c08fb4b597755d0ba63e367f0923254,ui/src/main/java/ucar/nc2/ui/ToolsUI.java,103662,104137
+f418f2c9c9fdb4a8059a401ab93c20d0c527b559,ui/src/main/java/ucar/nc2/ui/ToolsUI.java,103420,103646,5f1b6c4c9c08fb4b597755d0ba63e367f0923254,ui/src/main/java/ucar/nc2/ui/ToolsUI.java,83579,83776
+f418f2c9c9fdb4a8059a401ab93c20d0c527b559,ui/src/main/java/ucar/nc2/ui/ToolsUI.java,97874,98101,7a19bd406982e8c072a6c76414d9b044861c55f1,ui/src/main/java/ucar/nc2/ui/ToolsUI.java,52119,52322
+f418f2c9c9fdb4a8059a401ab93c20d0c527b559,ui/src/main/java/ucar/nc2/ui/ToolsUI.java,93527,93876,7a19bd406982e8c072a6c76414d9b044861c55f1,ui/src/main/java/ucar/nc2/ui/ToolsUI.java,53229,53605

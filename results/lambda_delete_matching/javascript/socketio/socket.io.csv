@@ -1,0 +1,3 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+2464de7d2bb94833994ba5bbc97e1a51245f9cc6,test/socket.io.js,24474,24729,84437dc2a682add44bb57d03f703cfc955607352,test/socket.io.js,24498,24727
+cab895f477233df0ce125401fc62e2aa73bd155d,test/connection.js,13261,13330,15a52ab7217dedd2c6f46dfd66fe97a48761ffa9,test/connection.js,13266,13315

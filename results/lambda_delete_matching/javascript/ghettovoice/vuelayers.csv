@@ -1,0 +1,5 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+3d426a5b02f0daea03c7918c982494028d875efa,src/mixin/features-container.js,1344,1423,d505c1950a22961de26571dc46fa4944f08e024b,src/mixin/features-container.js,670,705
+e68891589217c70a3ba1d4058fee76a8ccd3f3eb,build/rollup.js,1208,1296,f3b65d42f4668fa97d3896dc4fbc226e44574db3,build/rollup.js,1014,1039
+15701dd86804b209abe2292bbf22b696174dbdb3,src/mixin/ol-cmp.js,3097,3143,22db7fcc1ccbb06e73943481621e940e54dce0a8,src/mixin/ol-cmp.js,4829,4844
+d923bdd29b25bfadd9795d93b081bbfe8cd2c932,src/mixin/vector-source.js,3165,3267,05f3a83b05ed448c937e47dbd1e5d7af4c7c120d,src/mixin/vector-source.js,3249,3296

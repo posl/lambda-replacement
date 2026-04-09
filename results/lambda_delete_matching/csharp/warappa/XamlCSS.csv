@@ -1,0 +1,11 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+01a2b0aefb3f17b041113044244ff964a32b3b51,XamlCSS/Dom/DomElement.cs,10129,10228,26baa6dd2898a30cf814a69f63ae51af3831aadf,XamlCSS/Dom/DomElement.cs,12196,12314
+1b81189ad9445483a7c2b028052b5d8039c08f25,XamlCSS.WPF/StyleService.cs,10406,10503,26baa6dd2898a30cf814a69f63ae51af3831aadf,XamlCSS.WPF/StyleService.cs,14325,14382
+1b81189ad9445483a7c2b028052b5d8039c08f25,XamlCSS.WPF/StyleService.cs,16798,16920,26baa6dd2898a30cf814a69f63ae51af3831aadf,XamlCSS.WPF/StyleService.cs,21419,21508
+1b81189ad9445483a7c2b028052b5d8039c08f25,XamlCSS.WPF/StyleService.cs,14684,14881,26baa6dd2898a30cf814a69f63ae51af3831aadf,XamlCSS.WPF/StyleService.cs,19329,19469
+1b81189ad9445483a7c2b028052b5d8039c08f25,XamlCSS.WPF/StyleService.cs,17089,17224,26baa6dd2898a30cf814a69f63ae51af3831aadf,XamlCSS.WPF/StyleService.cs,21735,21810
+f82bf2c9b1825c305149e366895ad416c0e569f7,XamlCSS/Utils/TypeHelpers.cs,21769,21982,26baa6dd2898a30cf814a69f63ae51af3831aadf,XamlCSS/Utils/TypeHelpers.cs,22689,22809
+f82bf2c9b1825c305149e366895ad416c0e569f7,XamlCSS/Utils/TypeHelpers.cs,21995,22101,26baa6dd2898a30cf814a69f63ae51af3831aadf,XamlCSS/Utils/TypeHelpers.cs,22875,22928
+f82bf2c9b1825c305149e366895ad416c0e569f7,XamlCSS/Dom/TreeNodeProviderBase.cs,2400,2498,26baa6dd2898a30cf814a69f63ae51af3831aadf,XamlCSS/Dom/TreeNodeProviderBase.cs,2471,2529
+f82bf2c9b1825c305149e366895ad416c0e569f7,XamlCSS/Dom/TreeNodeProviderBase.cs,2326,2387,26baa6dd2898a30cf814a69f63ae51af3831aadf,XamlCSS/Dom/TreeNodeProviderBase.cs,2407,2432
+f82bf2c9b1825c305149e366895ad416c0e569f7,XamlCSS.WPF/MarkupExtensionParser.cs,3243,4975,26baa6dd2898a30cf814a69f63ae51af3831aadf,XamlCSS.WPF/MarkupExtensionParser.cs,3083,4783

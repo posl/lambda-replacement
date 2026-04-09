@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.posl</groupId>
+    <artifactId>detection_lambda_replace</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>java</artifactId>
+  <packaging>jar</packaging>
+
+  <dependencies>
+    <!-- https://mvnrepository.com/artifact/com.github.gumtreediff/client -->
+    <dependency>
+      <groupId>com.github.gumtreediff</groupId>
+      <artifactId>client</artifactId>
+      <version>4.0.0-beta3</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.gumtreediff</groupId>
+      <artifactId>core</artifactId>
+      <version>4.0.0-beta3</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.gumtreediff</groupId>
+      <artifactId>gen.treesitter-ng</artifactId>
+      <version>4.0.0-beta3</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <descriptorRefs>
+            <descriptorRef>jar-with-dependencies</descriptorRef>
+          </descriptorRefs>
+          <archive>
+            <manifest>
+              <mainClass>org.posl.core.TreeSitterLambda</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

@@ -1,0 +1,5 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+7551140f0e49f89670a3cc0a164287a1f3d9cfb2,src/ui/Menu.cpp,5434,5691,e0325cd263c8d6a390cc176d652392b9064d0b07,src/ui/Menu.cpp,6510,6735
+6055869a4d7cf5dedeecc3202be80d759914c368,src/modules/windows/transfers/TransfersContentsWidget.cpp,14246,14449,c6d995c0414754d5f5e6359d677bddec36db0f18,src/modules/windows/transfers/TransfersContentsWidget.cpp,14624,14673
+9c587eb58eb4fc58ce8287480a162badc14d47c5,src/ui/preferences/KeyboardProfileDialog.cpp,10145,10330,ada9ae8c239b705893562ace66178a18fbb17fb4,src/ui/preferences/KeyboardProfileDialog.cpp,9138,9828
+e4ce7584e1ae50f18cd70130e3ecda539ce15ad7,src/modules/windows/passwords/PasswordsContentsWidget.cpp,13731,13926,9e20dc05e742ce654ad7659ae2596093169cc3d6,src/modules/windows/passwords/PasswordsContentsWidget.cpp,13786,13938

@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+f565aa62d06fab1edd57e962a8913701619fcc4c,src/component/circularSectorLabels.js,1652,1719,c8a021c3e26d29d04a855973acd0d83b2ba73f73,src/component/circularSectorLabels.js,1664,1718

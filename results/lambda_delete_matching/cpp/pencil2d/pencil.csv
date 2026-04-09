@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+f0b970f423907cc7c4f8f6d55ed14f9599301086,core_lib/src/interface/timelinecells.cpp,8754,8857,dd2765036d2e284e988cf618847dbb2d95dd1f8b,core_lib/src/interface/timelinecells.cpp,7455,7524

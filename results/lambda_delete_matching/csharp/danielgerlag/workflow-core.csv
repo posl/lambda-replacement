@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+fe801052f4c24b1398287df276c44f085be19eec,src/WorkflowCore/Services/DefinitionStorage/StoredWorkflowDefinition.cs,2860,2939,fc05b7580b9f91f993988e2d8aad43d99055ffb0,src/WorkflowCore/Services/DefinitionStorage/StoredWorkflowDefinition.cs,2885,2937

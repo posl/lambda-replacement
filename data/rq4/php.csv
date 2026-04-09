@@ -1,0 +1,144 @@
+,name_with_owner,insert url,delete url,replacement_msg,delete_msg,coding,insert commit,insert src file,insert src start pos,insert dst file,insert dst start pos,delete commit,delete src file,delete src start pos,delete dst file,delete dst start pos,insert src file content,insert dst file content,delete src file content
+0,FriendsOfPHP_PHP-CS-Fixer,https://github.com/FriendsOfPHP/PHP-CS-Fixer/commit/287c45b0f49c4e5fecaa26caa3b267bc38efc68b,https://github.com/FriendsOfPHP/PHP-CS-Fixer/commit/f87756dca974f86dc88ff84be40be044a6f3ff21,"DX: enable `UseArrowFunctionsFixer` for the codebase (#7194)
+
+","DX: remove Prophecy (#7509)
+
+",,287c45b0f49c4e5fecaa26caa3b267bc38efc68b,tests/Cache/FileCacheManagerTest.php,"(81, 9)",tests/Cache/FileCacheManagerTest.php,"(79, 9)",f87756dca974f86dc88ff84be40be044a6f3ff21,tests/Cache/FileCacheManagerTest.php,"(79, 48)",tests/Cache/FileCacheManagerTest.php,,"$handlerProphecy->write(Argument::that(static function (CacheInterface $cache) use ($signature): bool {
+            return $cache->getSignature() === $signature;
+        }))->shouldBeCalled();",$handlerProphecy->write(Argument::that(static fn (CacheInterface $cache): bool => $cache->getSignature() === $signature))->shouldBeCalled();,static fn (CacheInterface $cache): bool => $cache->getSignature() === $signature
+1,FriendsOfPHP_PHP-CS-Fixer,https://github.com/FriendsOfPHP/PHP-CS-Fixer/commit/287c45b0f49c4e5fecaa26caa3b267bc38efc68b,https://github.com/FriendsOfPHP/PHP-CS-Fixer/commit/f65e6a20c9ef30f2fc93d8c3e1bf6aa3bd910192,"DX: enable `UseArrowFunctionsFixer` for the codebase (#7194)
+
+","fix: parsing mixed `&` and `|` in `TypeExpression` (#8210)
+
+",,287c45b0f49c4e5fecaa26caa3b267bc38efc68b,src/DocBlock/Annotation.php,"(230, 9)",src/DocBlock/Annotation.php,"(230, 9)",f65e6a20c9ef30f2fc93d8c3e1bf6aa3bd910192,src/DocBlock/Annotation.php,"(231, 33)",src/DocBlock/Annotation.php,,"$normalized = array_map(static function (string $type): string {
+            return strtolower($type);
+        }, $this->getTypes());","$normalized = array_map(static fn (string $type): string => strtolower($type), $this->getTypes());",static fn (string $type): string => strtolower($type)
+2,amphp_file,https://github.com/amphp/file/commit/3e012f9e786250298cc3513bc850be6faf8ee168,https://github.com/amphp/file/commit/742d9303d0446e7485c88a24d00e2956afc03b37,"Refactor for Amp v3
+","Use Revolt and update for Amp changes
+",,3e012f9e786250298cc3513bc850be6faf8ee168,test/AsyncFileTest.php,"(53, 9)",test/AsyncFileTest.php,"(52, 9)",742d9303d0446e7485c88a24d00e2956afc03b37,test/AsyncFileTest.php,"(52, 27)",test/AsyncFileTest.php,,$promise1 = $handle->write($data);,$promise1 = async(fn() => $handle->write($data));,fn() => $handle->write($data)
+3,prooph_event-store-client,https://github.com/prooph/event-store-client/commit/d3854e23364a4d70bdcd117d29c825b20686c764,https://github.com/prooph/event-store-client/commit/8a39988ed5600c0423af17cc2e0201b2dcde9421,"require php 7.4
+
+- property typehints
+- short arrow functions
+","fix broken tests
+",,d3854e23364a4d70bdcd117d29c825b20686c764,tests/Security/all_stream_with_no_acl_security.php,"(30, 13)",tests/Security/all_stream_with_no_acl_security.php,"(30, 13)",8a39988ed5600c0423af17cc2e0201b2dcde9421,tests/Security/all_stream_with_no_acl_security.php,"(27, 71)",tests/Security/all_stream_with_no_acl_security.php,,"yield $this->expectExceptionFromCallback(AccessDenied::class, function () {
+                return $this->writeStream('$all', null, null);
+            });","yield $this->expectExceptionFromCallback(AccessDenied::class, fn () => $this->writeStream('$all', null, null));","fn () => $this->writeStream('$all', null, null)"
+4,symfony_messenger,https://github.com/symfony/messenger/commit/cf412edde5523db1bd89b063fcfd6d22d7edce13,https://github.com/symfony/messenger/commit/5b9844dc53e0344ff0e335a8aae563180dd91440,"Leverage arrow function syntax for closure
+
+","do not mock the ContainerInterface
+
+",,cf412edde5523db1bd89b063fcfd6d22d7edce13,Tests/Middleware/SendMessageMiddlewareTest.php,"(243, 9)",Tests/Middleware/SendMessageMiddlewareTest.php,"(241, 9)",5b9844dc53e0344ff0e335a8aae563180dd91440,Tests/Middleware/SendMessageMiddlewareTest.php,"(243, 34)",Tests/Middleware/SendMessageMiddlewareTest.php,,"$container->expects($this->any())
+            ->method('get')
+            ->willReturnCallback(function ($id) use ($senders) {
+                return $senders[$id];
+            });","$container->expects($this->any())
+            ->method('get')
+            ->willReturnCallback(fn ($id) => $senders[$id]);",fn ($id) => $senders[$id]
+5,FriendsOfPHP_PHP-CS-Fixer,https://github.com/FriendsOfPHP/PHP-CS-Fixer/commit/287c45b0f49c4e5fecaa26caa3b267bc38efc68b,https://github.com/FriendsOfPHP/PHP-CS-Fixer/commit/74f6ba0c4d4fbe5a5bea0b8a1e5ae42741cf0c45,"DX: enable `UseArrowFunctionsFixer` for the codebase (#7194)
+
+","CI: general restructure (#7407)
+
+Co-authored-by: Greg Korba <wirone@gmail.com>",,287c45b0f49c4e5fecaa26caa3b267bc38efc68b,tests/AutoReview/CiConfigurationTest.php,"(157, 9)",tests/AutoReview/CiConfigurationTest.php,"(157, 9)",74f6ba0c4d4fbe5a5bea0b8a1e5ae42741cf0c45,tests/AutoReview/CiConfigurationTest.php,"(157, 54)",tests/AutoReview/CiConfigurationTest.php,,"$jobs = array_filter($this->getGitHubJobs(), static function (array $job): bool {
+            return isset($job['execute-deployment']) && 'yes' === $job['execute-deployment'];
+        });","$jobs = array_filter($this->getGitHubJobs(), static fn (array $job): bool => isset($job['execute-deployment']) && 'yes' === $job['execute-deployment']);",static fn (array $job): bool => isset($job['execute-deployment']) && 'yes' === $job['execute-deployment']
+6,FriendsOfPHP_PHP-CS-Fixer,https://github.com/FriendsOfPHP/PHP-CS-Fixer/commit/287c45b0f49c4e5fecaa26caa3b267bc38efc68b,https://github.com/FriendsOfPHP/PHP-CS-Fixer/commit/f87756dca974f86dc88ff84be40be044a6f3ff21,"DX: enable `UseArrowFunctionsFixer` for the codebase (#7194)
+
+","DX: remove Prophecy (#7509)
+
+",,287c45b0f49c4e5fecaa26caa3b267bc38efc68b,tests/Cache/FileCacheManagerTest.php,"(54, 9)",tests/Cache/FileCacheManagerTest.php,"(54, 9)",f87756dca974f86dc88ff84be40be044a6f3ff21,tests/Cache/FileCacheManagerTest.php,"(54, 48)",tests/Cache/FileCacheManagerTest.php,,"$handlerProphecy->write(Argument::that(static function (CacheInterface $cache) use ($signature): bool {
+            return $cache->getSignature() === $signature;
+        }))->shouldBeCalled();",$handlerProphecy->write(Argument::that(static fn (CacheInterface $cache): bool => $cache->getSignature() === $signature))->shouldBeCalled();,static fn (CacheInterface $cache): bool => $cache->getSignature() === $signature
+7,symfony_messenger,https://github.com/symfony/messenger/commit/cf412edde5523db1bd89b063fcfd6d22d7edce13,https://github.com/symfony/messenger/commit/5b9844dc53e0344ff0e335a8aae563180dd91440,"Leverage arrow function syntax for closure
+
+","do not mock the ContainerInterface
+
+",,cf412edde5523db1bd89b063fcfd6d22d7edce13,Tests/FailureIntegrationTest.php,"(259, 9)",Tests/FailureIntegrationTest.php,"(249, 9)",5b9844dc53e0344ff0e335a8aae563180dd91440,Tests/FailureIntegrationTest.php,"(256, 34)",Tests/FailureIntegrationTest.php,,"$locator->expects($this->any())
+            ->method('get')
+            ->willReturnCallback(function ($transportName) use ($transports) {
+                return $transports[$transportName];
+            });","$locator->expects($this->any())
+            ->method('get')
+            ->willReturnCallback(fn ($transportName) => $transports[$transportName]);",fn ($transportName) => $transports[$transportName]
+8,symfony_messenger,https://github.com/symfony/messenger/commit/cf412edde5523db1bd89b063fcfd6d22d7edce13,https://github.com/symfony/messenger/commit/5b9844dc53e0344ff0e335a8aae563180dd91440,"Leverage arrow function syntax for closure
+
+","do not mock the ContainerInterface
+
+",,cf412edde5523db1bd89b063fcfd6d22d7edce13,Tests/FailureIntegrationTest.php,"(67, 9)",Tests/FailureIntegrationTest.php,"(63, 9)",5b9844dc53e0344ff0e335a8aae563180dd91440,Tests/FailureIntegrationTest.php,"(70, 34)",Tests/FailureIntegrationTest.php,,"$locator->expects($this->any())
+            ->method('get')
+            ->willReturnCallback(function ($transportName) use ($transports) {
+                return $transports[$transportName];
+            });","$locator->expects($this->any())
+            ->method('get')
+            ->willReturnCallback(fn ($transportName) => $transports[$transportName]);",fn ($transportName) => $transports[$transportName]
+9,amphp_file,https://github.com/amphp/file/commit/3e012f9e786250298cc3513bc850be6faf8ee168,https://github.com/amphp/file/commit/b2b263092e9e6fb86e36f3fdb716c0a4e426a2af,"Refactor for Amp v3
+","Update for stream changes and coroutine to launch rename
+",,3e012f9e786250298cc3513bc850be6faf8ee168,test/AsyncFileTest.php,"(34, 9)",test/AsyncFileTest.php,"(34, 9)",b2b263092e9e6fb86e36f3fdb716c0a4e426a2af,test/AsyncFileTest.php,"(33, 31)",test/AsyncFileTest.php,,$promise2 = $handle->seek(0);,$promise2 = async(fn() => $handle->read(0));,fn() => $handle->read(0)
+10,amphp_file,https://github.com/amphp/file/commit/3e012f9e786250298cc3513bc850be6faf8ee168,https://github.com/amphp/file/commit/742d9303d0446e7485c88a24d00e2956afc03b37,"Refactor for Amp v3
+","Use Revolt and update for Amp changes
+",,3e012f9e786250298cc3513bc850be6faf8ee168,test/AsyncFileTest.php,"(71, 9)",test/AsyncFileTest.php,"(69, 9)",742d9303d0446e7485c88a24d00e2956afc03b37,test/AsyncFileTest.php,"(69, 27)",test/AsyncFileTest.php,,"$promise2 = $handle->write(""test"");","$promise2 = async(fn() => $handle->write(""test""));","fn() => $handle->write(""test"")"
+11,symfony_messenger,https://github.com/symfony/messenger/commit/cf412edde5523db1bd89b063fcfd6d22d7edce13,https://github.com/symfony/messenger/commit/5b9844dc53e0344ff0e335a8aae563180dd91440,"Leverage arrow function syntax for closure
+
+","do not mock the ContainerInterface
+
+",,cf412edde5523db1bd89b063fcfd6d22d7edce13,Tests/Transport/Sender/SendersLocatorTest.php,"(75, 9)",Tests/Transport/Sender/SendersLocatorTest.php,"(75, 9)",5b9844dc53e0344ff0e335a8aae563180dd91440,Tests/Transport/Sender/SendersLocatorTest.php,"(79, 34)",Tests/Transport/Sender/SendersLocatorTest.php,,"$container->expects($this->any())
+            ->method('has')
+            ->willReturnCallback(function ($id) use ($senders) {
+                return isset($senders[$id]);
+            });","$container->expects($this->any())
+            ->method('has')
+            ->willReturnCallback(fn ($id) => isset($senders[$id]));",fn ($id) => isset($senders[$id])
+12,prooph_event-store-client,https://github.com/prooph/event-store-client/commit/f9ff28f1daa77da96ba44aedf390debeadf7519e,https://github.com/prooph/event-store-client/commit/8a39988ed5600c0423af17cc2e0201b2dcde9421,"changes after review
+","fix broken tests
+",,f9ff28f1daa77da96ba44aedf390debeadf7519e,tests/Security/all_stream_with_no_acl_security.php,"(33, 9)",tests/Security/all_stream_with_no_acl_security.php,"(27, 9)",8a39988ed5600c0423af17cc2e0201b2dcde9421,tests/Security/all_stream_with_no_acl_security.php,"(27, 71)",tests/Security/all_stream_with_no_acl_security.php,,"yield $this->writeStream('$all', null, null);","yield $this->expectExceptionFromCallback(AccessDenied::class, fn () => $this->writeStream('$all', null, null));","fn () => $this->writeStream('$all', null, null)"
+13,FriendsOfPHP_PHP-CS-Fixer,https://github.com/FriendsOfPHP/PHP-CS-Fixer/commit/287c45b0f49c4e5fecaa26caa3b267bc38efc68b,https://github.com/FriendsOfPHP/PHP-CS-Fixer/commit/4a944844d308807d0f7e3fff0cb886adfd54e900,"DX: enable `UseArrowFunctionsFixer` for the codebase (#7194)
+
+","DX: fix checking test class extends `PhpCsFixer\Tests\TestCase` (#7567)
+
+",,287c45b0f49c4e5fecaa26caa3b267bc38efc68b,tests/AutoReview/ProjectCodeTest.php,"(820, 9)",tests/AutoReview/ProjectCodeTest.php,"(790, 9)",4a944844d308807d0f7e3fff0cb886adfd54e900,tests/AutoReview/ProjectCodeTest.php,"(868, 43)",tests/AutoReview/ProjectCodeTest.php,,"$classes = array_filter($classes, static function (string $class): bool {
+            return is_subclass_of($class, TestCase::class);
+        });","$classes = array_filter($classes, static fn (string $class): bool => is_subclass_of($class, TestCase::class));","static fn (string $class): bool => is_subclass_of($class, TestCase::class)"
+14,Codeception_Codeception,https://github.com/Codeception/Codeception/commit/2b7e9ace43d414902ecdba64d245fefa3fee8526,https://github.com/Codeception/Codeception/commit/fc707f5eec61e4d581968aa9c128f4550b0fd3c1,"Update codebase to PHP 7.4 (#6278)
+
+* set restrictions
+
+* Update codebase to PHP 7.4
+
+* temporarily ignore tests in php 8.1","Simplify Lib classes (#6767)
+
+",,2b7e9ace43d414902ecdba64d245fefa3fee8526,src/Codeception/Lib/Connector/Shared/PhpSuperGlobalsConverter.php,"(75, 21)",src/Codeception/Lib/Connector/Shared/PhpSuperGlobalsConverter.php,"(75, 21)",fc707f5eec61e4d581968aa9c128f4550b0fd3c1,src/Codeception/Lib/Connector/Shared/PhpSuperGlobalsConverter.php,"(76, 25)",src/Codeception/Lib/Connector/Shared/PhpSuperGlobalsConverter.php,,"$innerInfo = array_map(
+                        function ($v) use ($innerName) {
+                            return [$innerName => $v];
+                        },
+                        $innerInfo
+                    );","$innerInfo = array_map(
+                        fn($v) => [$innerName => $v],
+                        $innerInfo
+                    );",fn ($v): array => [$innerName => $v]
+15,FriendsOfPHP_PHP-CS-Fixer,https://github.com/FriendsOfPHP/PHP-CS-Fixer/commit/287c45b0f49c4e5fecaa26caa3b267bc38efc68b,https://github.com/FriendsOfPHP/PHP-CS-Fixer/commit/507331d92ec8232bb177803053f3a3c76c1c9429,"DX: enable `UseArrowFunctionsFixer` for the codebase (#7194)
+
+","CI: drop matrix for single-matrix-entry jobs of SCA and Deployment checks (#8193)
+
+",,287c45b0f49c4e5fecaa26caa3b267bc38efc68b,tests/AutoReview/CiConfigurationTest.php,"(158, 13)",tests/AutoReview/CiConfigurationTest.php,"(159, 9)",507331d92ec8232bb177803053f3a3c76c1c9429,tests/AutoReview/CiConfigurationTest.php,"(170, 26)",tests/AutoReview/CiConfigurationTest.php,,return isset($job['execute-deployment']) && 'yes' === $job['execute-deployment'];,"return array_map(static fn ($job): string => \is_string($job['php-version']) ? $job['php-version'] : sprintf('%.1f', $job['php-version']), $jobs);","static fn ($job): string => \is_string($job['php-version']) ? $job['php-version'] : \sprintf('%.1f', $job['php-version'])"
+16,symfony_messenger,https://github.com/symfony/messenger/commit/cf412edde5523db1bd89b063fcfd6d22d7edce13,https://github.com/symfony/messenger/commit/5b9844dc53e0344ff0e335a8aae563180dd91440,"Leverage arrow function syntax for closure
+
+","do not mock the ContainerInterface
+
+",,cf412edde5523db1bd89b063fcfd6d22d7edce13,Tests/Middleware/SendMessageMiddlewareTest.php,"(238, 9)",Tests/Middleware/SendMessageMiddlewareTest.php,"(238, 9)",5b9844dc53e0344ff0e335a8aae563180dd91440,Tests/Middleware/SendMessageMiddlewareTest.php,"(240, 34)",Tests/Middleware/SendMessageMiddlewareTest.php,,"$container->expects($this->any())
+            ->method('has')
+            ->willReturnCallback(function ($id) use ($senders) {
+                return isset($senders[$id]);
+            });","$container->expects($this->any())
+            ->method('has')
+            ->willReturnCallback(fn ($id) => isset($senders[$id]));",fn ($id) => isset($senders[$id])
+17,symfony_messenger,https://github.com/symfony/messenger/commit/cf412edde5523db1bd89b063fcfd6d22d7edce13,https://github.com/symfony/messenger/commit/5b9844dc53e0344ff0e335a8aae563180dd91440,"Leverage arrow function syntax for closure
+
+","do not mock the ContainerInterface
+
+",,cf412edde5523db1bd89b063fcfd6d22d7edce13,Tests/Transport/Sender/SendersLocatorTest.php,"(80, 9)",Tests/Transport/Sender/SendersLocatorTest.php,"(78, 9)",5b9844dc53e0344ff0e335a8aae563180dd91440,Tests/Transport/Sender/SendersLocatorTest.php,"(82, 34)",Tests/Transport/Sender/SendersLocatorTest.php,,"$container->expects($this->any())
+            ->method('get')
+            ->willReturnCallback(function ($id) use ($senders) {
+                return $senders[$id];
+            });","$container->expects($this->any())
+            ->method('get')
+            ->willReturnCallback(fn ($id) => $senders[$id]);",fn ($id) => $senders[$id]

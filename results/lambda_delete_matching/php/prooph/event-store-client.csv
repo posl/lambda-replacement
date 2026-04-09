@@ -1,0 +1,3 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+d3854e23364a4d70bdcd117d29c825b20686c764,tests/Security/all_stream_with_no_acl_security.php,750,861,8a39988ed5600c0423af17cc2e0201b2dcde9421,tests/Security/all_stream_with_no_acl_security.php,725,772
+f9ff28f1daa77da96ba44aedf390debeadf7519e,tests/Security/all_stream_with_no_acl_security.php,663,774,8a39988ed5600c0423af17cc2e0201b2dcde9421,tests/Security/all_stream_with_no_acl_security.php,725,772

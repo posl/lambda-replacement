@@ -1,0 +1,3 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+aea25a1408e98805fc17400cb2276628b71f46f8,test/pagy/frontend_test.rb,7882,7949,a546c43afcfb42b8ef87159b96905b8d0f78c9f9,test/pagy/frontend_test.rb,5506,5526
+aea25a1408e98805fc17400cb2276628b71f46f8,test/pagy/frontend_test.rb,7809,7875,a546c43afcfb42b8ef87159b96905b8d0f78c9f9,test/pagy/frontend_test.rb,5431,5450

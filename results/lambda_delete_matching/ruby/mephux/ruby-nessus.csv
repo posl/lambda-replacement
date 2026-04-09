@@ -1,0 +1,17 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,spec/ruby-nessus/parse_spec.rb,664,729,d4cca11ccbb29964d24caeabd0791faa161b0929,spec/ruby-nessus/parse_spec.rb,658,700
+f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,spec/ruby-nessus/parse_spec.rb,664,729,964116a4e61ff5f4ff2272ed7d84b3b5cd078813,spec/ruby-nessus/parse_spec.rb,658,700
+f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,spec/ruby-nessus/parse_spec.rb,485,550,d4cca11ccbb29964d24caeabd0791faa161b0929,spec/ruby-nessus/parse_spec.rb,482,524
+f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,spec/ruby-nessus/parse_spec.rb,485,550,964116a4e61ff5f4ff2272ed7d84b3b5cd078813,spec/ruby-nessus/parse_spec.rb,482,524
+f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,spec/ruby-nessus/parse_spec.rb,291,371,d4cca11ccbb29964d24caeabd0791faa161b0929,spec/ruby-nessus/parse_spec.rb,291,348
+f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,spec/ruby-nessus/parse_spec.rb,291,371,964116a4e61ff5f4ff2272ed7d84b3b5cd078813,spec/ruby-nessus/parse_spec.rb,291,348
+f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,spec/ruby-nessus/parse_spec.rb,152,232,d4cca11ccbb29964d24caeabd0791faa161b0929,spec/ruby-nessus/parse_spec.rb,152,209
+f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,spec/ruby-nessus/parse_spec.rb,152,232,964116a4e61ff5f4ff2272ed7d84b3b5cd078813,spec/ruby-nessus/parse_spec.rb,152,209
+b7d74dbce2f626e14b4e2a75bfb607204914620a,spec/ruby-nessus/parse_spec.rb,664,729,d4cca11ccbb29964d24caeabd0791faa161b0929,spec/ruby-nessus/parse_spec.rb,658,700
+b7d74dbce2f626e14b4e2a75bfb607204914620a,spec/ruby-nessus/parse_spec.rb,664,729,964116a4e61ff5f4ff2272ed7d84b3b5cd078813,spec/ruby-nessus/parse_spec.rb,658,700
+b7d74dbce2f626e14b4e2a75bfb607204914620a,spec/ruby-nessus/parse_spec.rb,485,550,d4cca11ccbb29964d24caeabd0791faa161b0929,spec/ruby-nessus/parse_spec.rb,482,524
+b7d74dbce2f626e14b4e2a75bfb607204914620a,spec/ruby-nessus/parse_spec.rb,485,550,964116a4e61ff5f4ff2272ed7d84b3b5cd078813,spec/ruby-nessus/parse_spec.rb,482,524
+b7d74dbce2f626e14b4e2a75bfb607204914620a,spec/ruby-nessus/parse_spec.rb,291,371,d4cca11ccbb29964d24caeabd0791faa161b0929,spec/ruby-nessus/parse_spec.rb,291,348
+b7d74dbce2f626e14b4e2a75bfb607204914620a,spec/ruby-nessus/parse_spec.rb,291,371,964116a4e61ff5f4ff2272ed7d84b3b5cd078813,spec/ruby-nessus/parse_spec.rb,291,348
+b7d74dbce2f626e14b4e2a75bfb607204914620a,spec/ruby-nessus/parse_spec.rb,152,232,d4cca11ccbb29964d24caeabd0791faa161b0929,spec/ruby-nessus/parse_spec.rb,152,209
+b7d74dbce2f626e14b4e2a75bfb607204914620a,spec/ruby-nessus/parse_spec.rb,152,232,964116a4e61ff5f4ff2272ed7d84b3b5cd078813,spec/ruby-nessus/parse_spec.rb,152,209

@@ -1,0 +1,2 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+0048c3733b247f3f5490c400e2ebb76bfc71209d,tests/ElCamino.AspNetCore.Identity.AzureTable.Tests/RoleStoreTests.cs,1182,1316,9b59c4e800cc6bbfc103441eac913f05671b69c0,tests/ElCamino.AspNetCore.Identity.AzureTable.Tests/RoleStoreTests.cs,1323,1439

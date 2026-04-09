@@ -1,0 +1,3 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+98c24d0bed4a0e6b73ab8e31cb41472fbda4a653,CoverflowAltTab@dmo60.de/switcher.js,7211,7464,b62bb52fb6b0ed0904a0e1535790b676ca23ab99,CoverflowAltTab@dmo60.de/switcher.js,7399,7447
+98c24d0bed4a0e6b73ab8e31cb41472fbda4a653,CoverflowAltTab@dmo60.de/switcher.js,8541,8808,b62bb52fb6b0ed0904a0e1535790b676ca23ab99,CoverflowAltTab@dmo60.de/switcher.js,8736,8791

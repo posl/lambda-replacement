@@ -1,0 +1,140 @@
+,name_with_owner,insert url,delete url,replacement_msg,delete_msg,coding,insert commit,insert src file,insert src start pos,insert dst file,insert dst start pos,delete commit,delete src file,delete src start pos,delete dst file,delete dst start pos,insert src file content,insert dst file content,delete src file content
+0,mephux_ruby-nessus,https://github.com/mephux/ruby-nessus/commit/f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,https://github.com/mephux/ruby-nessus/commit/d4cca11ccbb29964d24caeabd0791faa161b0929,"Rubocop coding style
+
+Signed-off-by: Florian Wininger <fw.centrale@gmail.com>
+","Add tests
+
+Signed-off-by: Alex Lecoq <hezanathos@gmail.fr>
+",,f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,spec/ruby-nessus/parse_spec.rb,"(6, 5)",spec/ruby-nessus/parse_spec.rb,"(6, 5)",d4cca11ccbb29964d24caeabd0791faa161b0929,spec/ruby-nessus/parse_spec.rb,"(6, 5)",spec/ruby-nessus/parse_spec.rb,,lambda { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V1_PATH) },-> { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V1_PATH) }.should_not raise_error,-> { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V1_PATH) }
+1,mephux_ruby-nessus,https://github.com/mephux/ruby-nessus/commit/f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,https://github.com/mephux/ruby-nessus/commit/964116a4e61ff5f4ff2272ed7d84b3b5cd078813,"Rubocop coding style
+
+Signed-off-by: Florian Wininger <fw.centrale@gmail.com>
+","Add tests
+
+Signed-off-by: Alex Lecoq <hezanathos@gmail.fr>
+",,f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,spec/ruby-nessus/parse_spec.rb,"(10, 5)",spec/ruby-nessus/parse_spec.rb,"(10, 5)",964116a4e61ff5f4ff2272ed7d84b3b5cd078813,spec/ruby-nessus/parse_spec.rb,"(10, 5)",spec/ruby-nessus/parse_spec.rb,,lambda { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V2_PATH) },-> { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V2_PATH) }.should_not raise_error,-> { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V2_PATH) }
+2,ontohub_ontohub,https://github.com/ontohub/ontohub/commit/3dc4e9663ede590ca9b2d7bfafd81a13ea21cdb2,https://github.com/ontohub/ontohub/commit/5f289ede8e14ace0747ffb53e40cca9cd5df7605,"Some refactoring (especially of the OntologySearch class).
+","Conflict fix after merge
+",,3dc4e9663ede590ca9b2d7bfafd81a13ea21cdb2,lib/ontology_search.rb,"(28, 13)",lib/ontology_search.rb,"(150, 5)",5f289ede8e14ace0747ffb53e40cca9cd5df7605,lib/ontology_search.rb,"(164, 7)",lib/ontology_search.rb,,"OntologyType.select([:name, :id]).order(:name).all.map {|type| {""name"" => type.name.sub(/Ontology/, ""ontologies""), ""value"" => type.id.to_s} }","model_to_filters_map OntologyType,
+      ->(x) {x.name.sub(/Ontology/, 'ontologies')}","->(x) {x.name.sub(/Ontology/, 'ontologies')}"
+3,mephux_ruby-nessus,https://github.com/mephux/ruby-nessus/commit/b7d74dbce2f626e14b4e2a75bfb607204914620a,https://github.com/mephux/ruby-nessus/commit/964116a4e61ff5f4ff2272ed7d84b3b5cd078813,"Rubocop coding style
+
+Signed-off-by: Florian Wininger <fw.centrale@gmail.com>
+","Add tests
+
+Signed-off-by: Alex Lecoq <hezanathos@gmail.fr>
+",,b7d74dbce2f626e14b4e2a75bfb607204914620a,spec/ruby-nessus/parse_spec.rb,"(20, 5)",spec/ruby-nessus/parse_spec.rb,"(20, 5)",964116a4e61ff5f4ff2272ed7d84b3b5cd078813,spec/ruby-nessus/parse_spec.rb,"(20, 5)",spec/ruby-nessus/parse_spec.rb,,"lambda { RubyNessus::Parse.new(nil, options) }","-> { RubyNessus::Parse.new(nil, options) }.should_not raise_error","-> { RubyNessus::Parse.new(nil, options) }"
+4,mephux_ruby-nessus,https://github.com/mephux/ruby-nessus/commit/b7d74dbce2f626e14b4e2a75bfb607204914620a,https://github.com/mephux/ruby-nessus/commit/964116a4e61ff5f4ff2272ed7d84b3b5cd078813,"Rubocop coding style
+
+Signed-off-by: Florian Wininger <fw.centrale@gmail.com>
+","Add tests
+
+Signed-off-by: Alex Lecoq <hezanathos@gmail.fr>
+",,b7d74dbce2f626e14b4e2a75bfb607204914620a,spec/ruby-nessus/parse_spec.rb,"(6, 5)",spec/ruby-nessus/parse_spec.rb,"(6, 5)",964116a4e61ff5f4ff2272ed7d84b3b5cd078813,spec/ruby-nessus/parse_spec.rb,"(6, 5)",spec/ruby-nessus/parse_spec.rb,,lambda { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V1_PATH) },-> { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V1_PATH) }.should_not raise_error,-> { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V1_PATH) }
+5,ddnexus_pagy,https://github.com/ddnexus/pagy/commit/aea25a1408e98805fc17400cb2276628b71f46f8,https://github.com/ddnexus/pagy/commit/a546c43afcfb42b8ef87159b96905b8d0f78c9f9,"code-restyling: test
+","internal refactoring of i18n
+",,aea25a1408e98805fc17400cb2276628b71f46f8,test/pagy/frontend_test.rb,"(119, 7)",test/pagy/frontend_test.rb,"(120, 7)",a546c43afcfb42b8ef87159b96905b8d0f78c9f9,test/pagy/frontend_test.rb,"(104, 56)",test/pagy/frontend_test.rb,,Pagy::I18n['en'][0]['pagy.info.product.one']   = lambda{|_| 'Product'},Pagy::I18n['en'][0]['pagy.info.product.one']   = ->(_){ 'Product'},->(_) { 'Product' }
+6,mephux_ruby-nessus,https://github.com/mephux/ruby-nessus/commit/b7d74dbce2f626e14b4e2a75bfb607204914620a,https://github.com/mephux/ruby-nessus/commit/d4cca11ccbb29964d24caeabd0791faa161b0929,"Rubocop coding style
+
+Signed-off-by: Florian Wininger <fw.centrale@gmail.com>
+","Add tests
+
+Signed-off-by: Alex Lecoq <hezanathos@gmail.fr>
+",,b7d74dbce2f626e14b4e2a75bfb607204914620a,spec/ruby-nessus/parse_spec.rb,"(20, 5)",spec/ruby-nessus/parse_spec.rb,"(20, 5)",d4cca11ccbb29964d24caeabd0791faa161b0929,spec/ruby-nessus/parse_spec.rb,"(20, 5)",spec/ruby-nessus/parse_spec.rb,,"lambda { RubyNessus::Parse.new(nil, options) }","-> { RubyNessus::Parse.new(nil, options) }.should_not raise_error","-> { RubyNessus::Parse.new(nil, options) }"
+7,sous-chefs_nagios,https://github.com/sous-chefs/nagios/commit/34e2767f7f7665b852077bbeefdc67362ae717c1,https://github.com/sous-chefs/nagios/commit/06591fa3ccaeca923ed5a31432ccde0f249a630e,"Update to latest test kitchen, add berkshelf, fix FC/rubocop warnings,
+avoid bogus FC warnings on travis
+","Fixes per Seth's comments
+",,34e2767f7f7665b852077bbeefdc67362ae717c1,spec/client_spec.rb,"(21, 5)",spec/client_spec.rb,"(21, 5)",06591fa3ccaeca923ed5a31432ccde0f249a630e,spec/client_spec.rb,"(21, 5)",spec/client_spec.rb,,lambda { chef_run },-> { chef_run }.should_not raise_error,-> { chef_run }
+8,mephux_ruby-nessus,https://github.com/mephux/ruby-nessus/commit/b7d74dbce2f626e14b4e2a75bfb607204914620a,https://github.com/mephux/ruby-nessus/commit/964116a4e61ff5f4ff2272ed7d84b3b5cd078813,"Rubocop coding style
+
+Signed-off-by: Florian Wininger <fw.centrale@gmail.com>
+","Add tests
+
+Signed-off-by: Alex Lecoq <hezanathos@gmail.fr>
+",,b7d74dbce2f626e14b4e2a75bfb607204914620a,spec/ruby-nessus/parse_spec.rb,"(15, 5)",spec/ruby-nessus/parse_spec.rb,"(15, 5)",964116a4e61ff5f4ff2272ed7d84b3b5cd078813,spec/ruby-nessus/parse_spec.rb,"(15, 5)",spec/ruby-nessus/parse_spec.rb,,"lambda { RubyNessus::Parse.new(nil, options) }","-> { RubyNessus::Parse.new(nil, options) }.should_not raise_error","-> { RubyNessus::Parse.new(nil, options) }"
+9,mephux_ruby-nessus,https://github.com/mephux/ruby-nessus/commit/f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,https://github.com/mephux/ruby-nessus/commit/964116a4e61ff5f4ff2272ed7d84b3b5cd078813,"Rubocop coding style
+
+Signed-off-by: Florian Wininger <fw.centrale@gmail.com>
+","Add tests
+
+Signed-off-by: Alex Lecoq <hezanathos@gmail.fr>
+",,f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,spec/ruby-nessus/parse_spec.rb,"(15, 5)",spec/ruby-nessus/parse_spec.rb,"(15, 5)",964116a4e61ff5f4ff2272ed7d84b3b5cd078813,spec/ruby-nessus/parse_spec.rb,"(15, 5)",spec/ruby-nessus/parse_spec.rb,,"lambda { RubyNessus::Parse.new(nil, options) }","-> { RubyNessus::Parse.new(nil, options) }.should_not raise_error","-> { RubyNessus::Parse.new(nil, options) }"
+10,mephux_ruby-nessus,https://github.com/mephux/ruby-nessus/commit/f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,https://github.com/mephux/ruby-nessus/commit/964116a4e61ff5f4ff2272ed7d84b3b5cd078813,"Rubocop coding style
+
+Signed-off-by: Florian Wininger <fw.centrale@gmail.com>
+","Add tests
+
+Signed-off-by: Alex Lecoq <hezanathos@gmail.fr>
+",,f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,spec/ruby-nessus/parse_spec.rb,"(20, 5)",spec/ruby-nessus/parse_spec.rb,"(20, 5)",964116a4e61ff5f4ff2272ed7d84b3b5cd078813,spec/ruby-nessus/parse_spec.rb,"(20, 5)",spec/ruby-nessus/parse_spec.rb,,"lambda { RubyNessus::Parse.new(nil, options) }","-> { RubyNessus::Parse.new(nil, options) }.should_not raise_error","-> { RubyNessus::Parse.new(nil, options) }"
+11,mephux_ruby-nessus,https://github.com/mephux/ruby-nessus/commit/b7d74dbce2f626e14b4e2a75bfb607204914620a,https://github.com/mephux/ruby-nessus/commit/d4cca11ccbb29964d24caeabd0791faa161b0929,"Rubocop coding style
+
+Signed-off-by: Florian Wininger <fw.centrale@gmail.com>
+","Add tests
+
+Signed-off-by: Alex Lecoq <hezanathos@gmail.fr>
+",,b7d74dbce2f626e14b4e2a75bfb607204914620a,spec/ruby-nessus/parse_spec.rb,"(10, 5)",spec/ruby-nessus/parse_spec.rb,"(10, 5)",d4cca11ccbb29964d24caeabd0791faa161b0929,spec/ruby-nessus/parse_spec.rb,"(10, 5)",spec/ruby-nessus/parse_spec.rb,,lambda { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V2_PATH) },-> { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V2_PATH) }.should_not raise_error,-> { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V2_PATH) }
+12,juntos-com-vc_juntos.com.vc,https://github.com/juntos-com-vc/juntos.com.vc/commit/af1011b65183fb9e2806d70cf18fc535bcb2c59d,https://github.com/juntos-com-vc/juntos.com.vc/commit/5e8cd2b5580855bed0f2922775a20d59543e4687,"solve compatibility problems with rails 4
+","show pending backers to project owner #changelog [Fix #50924037]
+",,af1011b65183fb9e2806d70cf18fc535bcb2c59d,app/models/backer.rb,"(35, 3)",app/models/backer.rb,"(35, 3)",5e8cd2b5580855bed0f2922775a20d59543e4687,app/models/backer.rb,"(34, 30)",app/models/backer.rb,,"scope :available_to_count, where(""state in ('confirmed', 'requested_refund', 'refunded')"")","scope :available_to_count, ->() { where(""state in ('confirmed', 'requested_refund', 'refunded')"") }","->() { where(""state in ('confirmed', 'requested_refund', 'refunded')"") }"
+13,juntos-com-vc_juntos.com.vc,https://github.com/juntos-com-vc/juntos.com.vc/commit/4ebeb3b5d8359a02b8f8ed1ab415c8b5aefcd0c2,https://github.com/juntos-com-vc/juntos.com.vc/commit/2ae53f80068bc9361f06ac753001c1bcded54b0f,"Change eager-evaluated scopes to use lambdas
+","migrated state related scopes from project to with_state provided by state_machine
+",,4ebeb3b5d8359a02b8f8ed1ab415c8b5aefcd0c2,app/models/project.rb,"(66, 3)",app/models/project.rb,"(66, 3)",2ae53f80068bc9361f06ac753001c1bcded54b0f,app/models/project.rb,"(65, 18)",app/models/project.rb,,"scope :online, where(state: 'online')","scope :online, -> { where(state: 'online') }",-> { where(state: 'online') }
+14,mephux_ruby-nessus,https://github.com/mephux/ruby-nessus/commit/f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,https://github.com/mephux/ruby-nessus/commit/d4cca11ccbb29964d24caeabd0791faa161b0929,"Rubocop coding style
+
+Signed-off-by: Florian Wininger <fw.centrale@gmail.com>
+","Add tests
+
+Signed-off-by: Alex Lecoq <hezanathos@gmail.fr>
+",,f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,spec/ruby-nessus/parse_spec.rb,"(20, 5)",spec/ruby-nessus/parse_spec.rb,"(20, 5)",d4cca11ccbb29964d24caeabd0791faa161b0929,spec/ruby-nessus/parse_spec.rb,"(20, 5)",spec/ruby-nessus/parse_spec.rb,,"lambda { RubyNessus::Parse.new(nil, options) }","-> { RubyNessus::Parse.new(nil, options) }.should_not raise_error","-> { RubyNessus::Parse.new(nil, options) }"
+15,mephux_ruby-nessus,https://github.com/mephux/ruby-nessus/commit/b7d74dbce2f626e14b4e2a75bfb607204914620a,https://github.com/mephux/ruby-nessus/commit/964116a4e61ff5f4ff2272ed7d84b3b5cd078813,"Rubocop coding style
+
+Signed-off-by: Florian Wininger <fw.centrale@gmail.com>
+","Add tests
+
+Signed-off-by: Alex Lecoq <hezanathos@gmail.fr>
+",,b7d74dbce2f626e14b4e2a75bfb607204914620a,spec/ruby-nessus/parse_spec.rb,"(10, 5)",spec/ruby-nessus/parse_spec.rb,"(10, 5)",964116a4e61ff5f4ff2272ed7d84b3b5cd078813,spec/ruby-nessus/parse_spec.rb,"(10, 5)",spec/ruby-nessus/parse_spec.rb,,lambda { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V2_PATH) },-> { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V2_PATH) }.should_not raise_error,-> { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V2_PATH) }
+16,mephux_ruby-nessus,https://github.com/mephux/ruby-nessus/commit/f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,https://github.com/mephux/ruby-nessus/commit/d4cca11ccbb29964d24caeabd0791faa161b0929,"Rubocop coding style
+
+Signed-off-by: Florian Wininger <fw.centrale@gmail.com>
+","Add tests
+
+Signed-off-by: Alex Lecoq <hezanathos@gmail.fr>
+",,f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,spec/ruby-nessus/parse_spec.rb,"(10, 5)",spec/ruby-nessus/parse_spec.rb,"(10, 5)",d4cca11ccbb29964d24caeabd0791faa161b0929,spec/ruby-nessus/parse_spec.rb,"(10, 5)",spec/ruby-nessus/parse_spec.rb,,lambda { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V2_PATH) },-> { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V2_PATH) }.should_not raise_error,-> { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V2_PATH) }
+17,mephux_ruby-nessus,https://github.com/mephux/ruby-nessus/commit/f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,https://github.com/mephux/ruby-nessus/commit/d4cca11ccbb29964d24caeabd0791faa161b0929,"Rubocop coding style
+
+Signed-off-by: Florian Wininger <fw.centrale@gmail.com>
+","Add tests
+
+Signed-off-by: Alex Lecoq <hezanathos@gmail.fr>
+",,f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,spec/ruby-nessus/parse_spec.rb,"(15, 5)",spec/ruby-nessus/parse_spec.rb,"(15, 5)",d4cca11ccbb29964d24caeabd0791faa161b0929,spec/ruby-nessus/parse_spec.rb,"(15, 5)",spec/ruby-nessus/parse_spec.rb,,"lambda { RubyNessus::Parse.new(nil, options) }","-> { RubyNessus::Parse.new(nil, options) }.should_not raise_error","-> { RubyNessus::Parse.new(nil, options) }"
+18,mephux_ruby-nessus,https://github.com/mephux/ruby-nessus/commit/b7d74dbce2f626e14b4e2a75bfb607204914620a,https://github.com/mephux/ruby-nessus/commit/d4cca11ccbb29964d24caeabd0791faa161b0929,"Rubocop coding style
+
+Signed-off-by: Florian Wininger <fw.centrale@gmail.com>
+","Add tests
+
+Signed-off-by: Alex Lecoq <hezanathos@gmail.fr>
+",,b7d74dbce2f626e14b4e2a75bfb607204914620a,spec/ruby-nessus/parse_spec.rb,"(6, 5)",spec/ruby-nessus/parse_spec.rb,"(6, 5)",d4cca11ccbb29964d24caeabd0791faa161b0929,spec/ruby-nessus/parse_spec.rb,"(6, 5)",spec/ruby-nessus/parse_spec.rb,,lambda { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V1_PATH) },-> { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V1_PATH) }.should_not raise_error,-> { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V1_PATH) }
+19,juntos-com-vc_juntos.com.vc,https://github.com/juntos-com-vc/juntos.com.vc/commit/af1011b65183fb9e2806d70cf18fc535bcb2c59d,https://github.com/juntos-com-vc/juntos.com.vc/commit/5e8cd2b5580855bed0f2922775a20d59543e4687,"solve compatibility problems with rails 4
+","show pending backers to project owner #changelog [Fix #50924037]
+",,af1011b65183fb9e2806d70cf18fc535bcb2c59d,app/models/backer.rb,"(36, 3)",app/models/backer.rb,"(36, 3)",5e8cd2b5580855bed0f2922775a20d59543e4687,app/models/backer.rb,"(35, 32)",app/models/backer.rb,,"scope :available_to_display, where(""state in ('confirmed', 'requested_refund', 'refunded', 'waiting_confirmation')"")","scope :available_to_display, ->() { where(""state in ('confirmed', 'requested_refund', 'refunded', 'waiting_confirmation')"") }","->() { where(""state in ('confirmed', 'requested_refund', 'refunded', 'waiting_confirmation')"") }"
+20,ddnexus_pagy,https://github.com/ddnexus/pagy/commit/aea25a1408e98805fc17400cb2276628b71f46f8,https://github.com/ddnexus/pagy/commit/a546c43afcfb42b8ef87159b96905b8d0f78c9f9,"code-restyling: test
+","internal refactoring of i18n
+",,aea25a1408e98805fc17400cb2276628b71f46f8,test/pagy/frontend_test.rb,"(120, 7)",test/pagy/frontend_test.rb,"(121, 7)",a546c43afcfb42b8ef87159b96905b8d0f78c9f9,test/pagy/frontend_test.rb,"(105, 56)",test/pagy/frontend_test.rb,,Pagy::I18n['en'][0]['pagy.info.product.other'] = lambda{|_| 'Products'},Pagy::I18n['en'][0]['pagy.info.product.other'] = ->(_){ 'Products'},->(_) { 'Products' }
+21,ontohub_ontohub,https://github.com/ontohub/ontohub/commit/3dc4e9663ede590ca9b2d7bfafd81a13ea21cdb2,https://github.com/ontohub/ontohub/commit/5f289ede8e14ace0747ffb53e40cca9cd5df7605,"Some refactoring (especially of the OntologySearch class).
+","Conflict fix after merge
+",,3dc4e9663ede590ca9b2d7bfafd81a13ea21cdb2,lib/ontology_search.rb,"(33, 13)",lib/ontology_search.rb,"(175, 5)",5f289ede8e14ace0747ffb53e40cca9cd5df7605,lib/ontology_search.rb,"(189, 7)",lib/ontology_search.rb,,"Task.select([:name, :id]).order(:name).all.map {|task| {""name"" => ""for "" + task.name[0..-5].from_titlecase_to_spacedlowercase, ""value"" => task.id.to_s} }","model_to_filters_map Task,
+      ->(x) {'for ' + x.name[0..-5].from_titlecase_to_spacedlowercase}",->(x) {'for ' + x.name[0..-5].from_titlecase_to_spacedlowercase}
+22,mephux_ruby-nessus,https://github.com/mephux/ruby-nessus/commit/b7d74dbce2f626e14b4e2a75bfb607204914620a,https://github.com/mephux/ruby-nessus/commit/d4cca11ccbb29964d24caeabd0791faa161b0929,"Rubocop coding style
+
+Signed-off-by: Florian Wininger <fw.centrale@gmail.com>
+","Add tests
+
+Signed-off-by: Alex Lecoq <hezanathos@gmail.fr>
+",,b7d74dbce2f626e14b4e2a75bfb607204914620a,spec/ruby-nessus/parse_spec.rb,"(15, 5)",spec/ruby-nessus/parse_spec.rb,"(15, 5)",d4cca11ccbb29964d24caeabd0791faa161b0929,spec/ruby-nessus/parse_spec.rb,"(15, 5)",spec/ruby-nessus/parse_spec.rb,,"lambda { RubyNessus::Parse.new(nil, options) }","-> { RubyNessus::Parse.new(nil, options) }.should_not raise_error","-> { RubyNessus::Parse.new(nil, options) }"
+23,mephux_ruby-nessus,https://github.com/mephux/ruby-nessus/commit/f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,https://github.com/mephux/ruby-nessus/commit/964116a4e61ff5f4ff2272ed7d84b3b5cd078813,"Rubocop coding style
+
+Signed-off-by: Florian Wininger <fw.centrale@gmail.com>
+","Add tests
+
+Signed-off-by: Alex Lecoq <hezanathos@gmail.fr>
+",,f0af6aad085ae3d43a6ac0b43803f80c41f8d6a3,spec/ruby-nessus/parse_spec.rb,"(6, 5)",spec/ruby-nessus/parse_spec.rb,"(6, 5)",964116a4e61ff5f4ff2272ed7d84b3b5cd078813,spec/ruby-nessus/parse_spec.rb,"(6, 5)",spec/ruby-nessus/parse_spec.rb,,lambda { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V1_PATH) },-> { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V1_PATH) }.should_not raise_error,-> { RubyNessus::Parse.new(Helpers::DOT_NESSUS_V1_PATH) }

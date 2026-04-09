@@ -1,0 +1,3 @@
+insert commit,insert dst file,insert dst start pos,insert dst end pos,delete commit,delete src file,delete src start pos,delete src end pos
+49c35ac466acaadbf6272d0eaae9bf68c5088430,src/main/java/de/plushnikov/intellij/plugin/lombokconfig/ConfigDiscovery.java,1473,1623,d25ff91428f7569c85c4a026ea02c81f7b7e6c57,src/main/java/de/plushnikov/intellij/plugin/lombokconfig/ConfigDiscovery.java,1551,1621
+d4656f889d21289d977adfee2fa3436e9a8e19c0,src/main/java/de/plushnikov/intellij/plugin/quickfix/CreateFieldQuickFix.java,2419,3699,d71dbde6c0fb9db8de23ee070cce755c6dc19150,src/main/java/de/plushnikov/intellij/plugin/quickfix/CreateFieldQuickFix.java,2014,3225
