@@ -14,6 +14,8 @@ from config import (
     repositories_lang_sample_pickle_path,
     project_replacement_path,
     lambda_replacement_log_path,
+    get_extensions,
+    get_introduction_date,
 )
 
 
@@ -47,18 +49,6 @@ def setup_logger(name: str, language: str, level: int = INFO) -> Logger:
         logger.addHandler(handler)
 
     return logger
-
-
-def get_language_config(language: str) -> tuple[str, str]:
-    configs = {
-        "java": ("2014-03-17", "java"),
-        "javascript": ("2014-06-01", "js"),
-        "ruby": ("2009-01-29", "rb"),
-        "php": ("2019-11-27", "php"),
-        "csharp": ("2007-11-18", "cs"),
-        "cpp": ("2010-08-12", "cpp"),
-    }
-    return configs[language]
 
 
 # Main Processing Functions
@@ -202,7 +192,8 @@ def collect_lambda(language: str):
     lang_logger = setup_logger(language, language)
     lang_logger.info("Start!")
 
-    introduction_date, extension = get_language_config(language)
+    introduction_date = get_introduction_date(language)
+    extension = get_extensions(language)
 
     df = pd.read_pickle(repositories_lang_sample_pickle_path(language))
     # df.sort_values("commits", ascending=True, inplace=True)

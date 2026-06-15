@@ -9,12 +9,30 @@ PICKLE_DIR = DATA_DIR / "pickle"
 CSV_DIR = DATA_DIR / "csv"
 RESULT_DIR = PROJECT_ROOT / "results"
 LOG_DIR = PROJECT_ROOT / "logs"
+TMP_DIR = PROJECT_ROOT / "tmp"
+
 
 SAMPLE_SIZE = 500
 
 
-def repositories_lang_sample_pickle_path(language: str) -> Path:
-    return PICKLE_DIR / f"repositories_{language}_sample{SAMPLE_SIZE}.pkl"
+def repositories_lang_path(language: str, extension: str = "pkl") -> Path:
+    match extension:
+        case "csv":
+            return CSV_DIR / f"repositories_{language}.csv"
+        case "pkl":
+            return PICKLE_DIR / f"repositories_{language}.pkl"
+        case _:
+            raise ValueError(f"Unsupported extension: {extension}")
+
+
+def repositories_lang_sample_path(language: str, extension: str = "pkl") -> Path:
+    match extension:
+        case "csv":
+            return CSV_DIR / f"repositories_{language}_sample.csv"
+        case "pkl":
+            return PICKLE_DIR / f"repositories_{language}_sample.pkl"
+        case _:
+            raise ValueError(f"Unsupported extension: {extension}")
 
 
 # repositories
@@ -62,3 +80,15 @@ def get_extensions(language: str) -> str:
         "cpp": "cpp",
     }
     return ext_dict[language]
+
+
+def get_introduction_date(language: str) -> str:
+    introduction_date_dict = {
+        "cpp": "2011-8-12",
+        "csharp": "2007-11-19",
+        "java": "2014-03-18",
+        "javascript": "2015-06-17",
+        "php": "2019-11-28",
+        "ruby": "2009-01-30",
+    }
+    return introduction_date_dict[language]

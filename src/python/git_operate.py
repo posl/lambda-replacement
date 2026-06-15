@@ -5,8 +5,8 @@ from time import sleep
 from typing import Generator, Iterator
 
 import git
-from config import repositories_path
-from git import Commit
+
+from .config import repositories_path
 
 GITHUB_TOKEN = os.environ["GITHUB_TOKEN"]
 
@@ -23,7 +23,8 @@ def __clone_git_repo(to_path: str, name_with_owner: str, language: str) -> git.R
     """
     url = f"https://{GITHUB_TOKEN}@github.com/{name_with_owner}.git"
 
-    repo = git.Repo.clone_from(url, to_path, no_checkout=True, filter="blob:none")
+    repo = git.Repo.clone_from(
+        url, to_path, no_checkout=True, filter="blob:none")
     sleep(1)
 
     # match language:
@@ -62,11 +63,7 @@ def get_repo(name_with_owner: str, language: str) -> git.Repo:
 
 
 def del_repo(name_with_owner: str, language: str):
-    """
-    リポジトリを削除する．\n
-    config.del_repositories_flagが立っていたらオナーのディレクトリから削除．\n
-    立っていないならプロジェクトのディレクトリのみ削除．
-    """
+    """ リポジトリを削除する．\n config.del_repositories_flagが立っていたらオナーのディレクトリから削除．\n 立っていないならプロジェクトのディレクトリのみ削除． """
     repo_dir = repositories_path(language, name_with_owner)
     top_dir = repo_dir.parent
 
@@ -78,7 +75,7 @@ def del_repo(name_with_owner: str, language: str):
         shutil.rmtree(top_dir, ignore_errors=True)
 
 
-def get_diff(commit: Commit, extension: str) -> str:
+def get_diff(commit: git.Commit, extension: str) -> str:
     diff = commit.repo.git.diff(
         commit.parents[0],
         commit,
@@ -129,5 +126,5 @@ class DiffCodesGenerator:
         return len(self.change_symbol_and_file_tuples)
 
 
-def get_past_contents(commit: Commit, file: str) -> str:
+def get_past_contents(commit: git.Commit, file: str) -> str:
     return commit.repo.git.show(f"{commit.hexsha}:{file}")
