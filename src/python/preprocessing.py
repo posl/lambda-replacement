@@ -1,14 +1,15 @@
 import pandas as pd
 from tqdm import tqdm
 
-from config import (
+from .config import (
     DATA_DIR,
     LANGUAGES,
     PICKLE_DIR,
-    SAMPLE_SIZE,
-    repositories_lang_sample_pickle_path,
+    CSV_DIR,
+    RESULT_DIR,
+    LOG_DIR,
+    lang_repositories_path,
 )
-from git_operate import get_repo
 
 CHUNK_SIZE = 100_000
 
@@ -220,6 +221,8 @@ def data_preprocessing():
     repositories["Stars Count"] = repositories["Stars Count"].astype(int)
     repositories["Open Issues Count"] = repositories["Open Issues Count"].astype(int)
 
+    repositories.set_index("Name with Owner", inplace=True)
+
     repositories.to_pickle(LIBRARIES_PICKLE_PATH)
 
     lang_raw = {
@@ -233,45 +236,20 @@ def data_preprocessing():
 
     for language in LANGUAGES:
         language_df = repositories[repositories["Language"] == lang_raw[language]]
-        language_df = screaning_toy(language_df, language)
-        language_df.to_pickle(PICKLE_DIR / f"repositories_{language}.pkl")
+        language_df = language_df.sample(frac=1, random_state=42)
+        language_df.set_index("Name with Owner", inplace=True)
+        language_df.to_pickle(lang_repositories_path(language, "pkl"))
+        language_df.to_csv(lang_repositories_path(language, "csv"))
+        print(f"{language} done")
 
-        sampling_df = language_df.sample(n=SAMPLE_SIZE, random_state=42)
-        sampling_df.to_pickle(repositories_lang_sample_pickle_path(language))
 
-
-def screaning_toy(df: pd.DataFrame, language: str) -> pd.DataFrame:
-    """
-    toy projectsを除外（開発者数1を除外するための情報付与）
-    同時に、リポジトリにアクセスできないものを除外するための情報も付与
-    """
-    df = df.copy()
-
-    not_available = []
-    developers_list = []
-
-    for name_with_owner in tqdm(df["Name with Owner"], desc=f"{language} repos"):
-        try:
-            repo = get_repo(
-                name_with_owner=name_with_owner,
-                language=language,
-            )
-
-            developers = repo.git.shortlog("HEAD", "-sn")
-            developers_count = developers.count("\n") + 1
-
-            not_available.append(False)
-            developers_list.append(developers_count)
-
-        except Exception:
-            not_available.append(True)
-            developers_list.append(0)
-
-    df["not_available"] = not_available
-    df["developers"] = developers_list
-
-    return df
+def mkdir():
+    CSV_DIR.mkdir(parents=True, exist_ok=True)
+    PICKLE_DIR.mkdir(parents=True, exist_ok=True)
+    RESULT_DIR.mkdir(parents=True, exist_ok=True)
+    LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 
 if __name__ == "__main__":
+    mkdir()
     data_preprocessing()

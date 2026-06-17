@@ -6,9 +6,7 @@ from typing import Generator, Iterator
 
 import git
 
-from .config import repositories_path
-
-GITHUB_TOKEN = os.environ["GITHUB_TOKEN"]
+from .config import repositories_path, get_repo_url
 
 DIFF_PATTERN_COMPILER = re.compile("([ADMCR])[0-9]*\t(.*)")
 TWO_FILES_PATTERN_COMPILER = re.compile("(.*)\t(.*)")
@@ -21,10 +19,9 @@ def __clone_git_repo(to_path: str, name_with_owner: str, language: str) -> git.R
     成功時， git.Repo を返し，失敗時 エラー を返す\n
     ここで1秒スリープ
     """
-    url = f"https://{GITHUB_TOKEN}@github.com/{name_with_owner}.git"
+    url = get_repo_url(name_with_owner, language)
 
-    repo = git.Repo.clone_from(
-        url, to_path, no_checkout=True, filter="blob:none")
+    repo = git.Repo.clone_from(url, to_path, no_checkout=True)
     sleep(1)
 
     # match language:
@@ -63,7 +60,7 @@ def get_repo(name_with_owner: str, language: str) -> git.Repo:
 
 
 def del_repo(name_with_owner: str, language: str):
-    """ リポジトリを削除する．\n config.del_repositories_flagが立っていたらオナーのディレクトリから削除．\n 立っていないならプロジェクトのディレクトリのみ削除． """
+    """リポジトリを削除する．\n config.del_repositories_flagが立っていたらオナーのディレクトリから削除．\n 立っていないならプロジェクトのディレクトリのみ削除．"""
     repo_dir = repositories_path(language, name_with_owner)
     top_dir = repo_dir.parent
 

@@ -10,7 +10,7 @@ from git_operate import DiffCodesGenerator, get_diff, get_repo
 from tqdm import tqdm
 
 from config import (
-    jar_path,
+    JAR_PATH,
     repositories_lang_sample_pickle_path,
     project_replacement_path,
     lambda_replacement_log_path,
@@ -63,7 +63,7 @@ def process_commit(
     except KeyboardInterrupt:
         raise
     except GitCommandError as e:
-        logger.error(f"GitCommandError: {e}")
+        logger.error("GitCommandError", exc_info=e)
         return []
 
     results: list[LambdaResult] = []
@@ -73,7 +73,8 @@ def process_commit(
             cmd = [
                 "java",
                 "-jar",
-                str(jar_path(language)),
+                JAR_PATH,
+                language,
                 commit.repo.working_dir,
                 commit.parents[0].hexsha,
                 commit.hexsha,
@@ -90,16 +91,17 @@ def process_commit(
 
             if res.returncode != 0:
                 logger.error(
-                    f"{commit.hexsha:}: {src_file:}, {dst_file:}\n{res.stderr}"
+                    f"{commit.hexsha:}: {src_file:}, {dst_file:}",
+                    exc_info=Exception(res.stderr),
                 )
                 continue
         except KeyboardInterrupt:
             raise
         except Exception as e:
-            logger.error(f"{commit.hexsha:}: {src_file:}, {dst_file:}\n{e}")
+            logger.error(f"{commit.hexsha:}: {src_file:}, {dst_file:}", exc_info=e)
             continue
 
-        for line in res.stdout.split("\n"):
+        for line in res.stdout.splitlines():
             parts = line.split("\t")
 
             if len(parts) != 5:
@@ -129,6 +131,7 @@ def process_repository(
     language: str,
     extension: str,
     introduction_date: str,
+    commit_count: int,
 ) -> None:
     """_summary_
 
@@ -154,7 +157,7 @@ def process_repository(
     for commit in tqdm(
         repo.iter_commits(since=introduction_date),
         desc=name_with_owner,
-        # total=repo.commit().count(),
+        total=commit_count,
         leave=False,
     ):
         if len(commit.parents) != 1:
@@ -196,15 +199,16 @@ def collect_lambda(language: str):
     extension = get_extensions(language)
 
     df = pd.read_pickle(repositories_lang_sample_pickle_path(language))
-    # df.sort_values("commits", ascending=True, inplace=True)
-    # df = df[210:]
+    df.sort_values("commit_count_after_introduction", inplace=True, ascending=True)
 
     for name_with_owner in tqdm(df["Name with Owner"], desc=language):
+        commit_count = int(df.loc[name_with_owner, "commit_count_after_introduction"])
         process_repository(
             name_with_owner,
             language,
             extension,
             introduction_date,
+            commit_count,
         )
 
     lang_logger.info("Done!")

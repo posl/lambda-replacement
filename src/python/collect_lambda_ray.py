@@ -1,6 +1,7 @@
 import argparse
 import gc
 import subprocess
+from collections import deque
 from logging import INFO, FileHandler, Logger, getLogger
 from dataclasses import dataclass
 from datetime import datetime
@@ -10,18 +11,16 @@ import pandas as pd
 import psutil
 import ray
 from git import Commit, GitCommandError
-from ray.util.actor_pool import ActorPool
 from ray.experimental.tqdm_ray import tqdm as rtqdm
 
-from git_operate import DiffCodesGenerator, get_diff, get_repo
-from config import (
-    jar_path,
-    repositories_lang_sample_pickle_path,
+from .git_operate import DiffCodesGenerator, get_diff, get_repo
+from .config import (
+    JAR_PATH,
+    repositories_lang_sample_acc_path,
     project_replacement_path,
     lambda_replacement_log_path,
-    TMP_DIR,
     get_extensions,
-    get_introduction_date
+    get_introduction_date,
 )
 
 
@@ -78,7 +77,7 @@ class WorkerActor:
         except KeyboardInterrupt:
             raise
         except GitCommandError as e:
-            logger.error(f"GitCommandError: {e}")
+            logger.error("GitCommandError", exc_info=e)
             return []
 
         results: list[LambdaResult] = []
@@ -88,7 +87,8 @@ class WorkerActor:
                 cmd = [
                     "java",
                     "-jar",
-                    str(jar_path(self.language)),
+                    JAR_PATH,
+                    self.language,
                     commit.repo.working_dir,
                     commit.parents[0].hexsha,
                     commit.hexsha,
@@ -105,13 +105,14 @@ class WorkerActor:
 
                 if res.returncode != 0:
                     logger.error(
-                        f"{commit.hexsha:}: {src_file:}, {dst_file:}\n{res.stderr}"
+                        f"{commit.hexsha:}: {src_file:}, {dst_file:}",
+                        exc_info=Exception(res.stderr),
                     )
                     continue
             except KeyboardInterrupt:
                 raise
             except Exception as e:
-                logger.error(f"{commit.hexsha:}: {src_file:}, {dst_file:}\n{e}")
+                logger.error(f"{commit.hexsha:}: {src_file:}, {dst_file:}", exc_info=e)
                 continue
 
             for line in res.stdout.splitlines():
@@ -138,11 +139,10 @@ class WorkerActor:
 
         return results
 
-    def process_repository(
-        self,
-        name_with_owner: str,
-    ) -> None:
-        repo_logger = self.setup_logger(name_with_owner.replace("/", "_"), self.language)
+    def process_repository(self, name_with_owner: str, commit_count: int) -> str:
+        repo_logger = self.setup_logger(
+            name_with_owner.replace("/", "_"), self.language
+        )
         repo_logger.info("Start!")
 
         try:
@@ -150,8 +150,8 @@ class WorkerActor:
         except KeyboardInterrupt:
             raise
         except Exception:
-            repo_logger.error(f"Repository not found: {name_with_owner}")
-            return []
+            repo_logger.exception(f"Repository not found: {name_with_owner}")
+            return name_with_owner
 
         results: list[LambdaResult] = []
 
@@ -161,7 +161,7 @@ class WorkerActor:
         for commit in rtqdm(
             repo.iter_commits(since=self.introduction_date),
             desc=desc,
-            # total=repo.commit().count(),
+            total=commit_count,
         ):
             if len(commit.parents) != 1:
                 continue
@@ -177,53 +177,91 @@ class WorkerActor:
 
         repo_logger.info("Done!")
 
+        return name_with_owner
+
     def save_results(self, results: list[LambdaResult], name_with_owner: str):
         if not results:
             return
 
         df = pd.DataFrame([r.__dict__ for r in results])
 
-        # result_path = project_replacement_path(self.language, name_with_owner)
+        result_path = project_replacement_path(self.language, name_with_owner)
 
-        # result_path.parent.mkdir(parents=True, exist_ok=True)
-
-        result_path = TMP_DIR / f"{self.language}_{name_with_owner.replace('/', '_')}.csv"
+        result_path.parent.mkdir(parents=True, exist_ok=True)
 
         df.to_csv(result_path, index=False)
 
-def collect_lambda_ray(
-    language: str,
-    num_cpus: int = 10,
-):
-    ray.init(
-        num_cpus=num_cpus,
-        ignore_reinit_error=True,
-    )
 
-    workers = [
-        WorkerActor.remote(language)
-        for _ in range(num_cpus)
-    ]
+def collect_lambda_ray(language: str, num_cpus: int = 10):
+    if num_cpus < 1:
+        raise ValueError("num_cpus must be at least 1")
 
-    pool = ActorPool(workers)
+    lang_logger = WorkerActor.setup_logger(language, language)
+    lang_logger.info("Start!")
 
-    df = pd.read_pickle(
-        repositories_lang_sample_pickle_path(language)
-    )
+    try:
+        ray.init(
+            num_cpus=num_cpus,
+            ignore_reinit_error=True,
+        )
 
-    tasks = list(df["Name with Owner"])
+        workers = [WorkerActor.remote(language) for _ in range(num_cpus)]
 
-    for _ in rtqdm(
-        pool.map(
-            lambda actor, repo:
-                actor.process_repository.remote(repo),
-            tasks,
-        ),
-        total=len(tasks),
-    ):
-        pass
+        df = pd.read_pickle(repositories_lang_sample_acc_path(language))
+        df.sort_values("commit_count_after_introduction", inplace=True, ascending=True)
 
-    ray.shutdown()
+        pending_repositories = deque(df.index)
+
+        def submit_next(worker):
+            if not pending_repositories:
+                return None
+
+            name_with_owner = pending_repositories.popleft()
+            commit_count = int(
+                df.loc[name_with_owner, "commit_count_after_introduction"]
+            )
+            ref = worker.process_repository.remote(name_with_owner, commit_count)
+            return ref, worker, name_with_owner
+
+        running = {}
+        for worker in workers:
+            submitted = submit_next(worker)
+            if submitted is None:
+                break
+
+            ref, worker, name_with_owner = submitted
+            running[ref] = (worker, name_with_owner)
+            lang_logger.info(f"Started repository: {name_with_owner}")
+
+        progress_bar = rtqdm(total=len(df.index), desc=language)
+        progress_bar.update(0)
+
+        while running:
+            done_refs, _ = ray.wait(list(running), num_returns=1)
+
+            for done_ref in done_refs:
+                worker, name_with_owner = running.pop(done_ref)
+
+                try:
+                    result = ray.get(done_ref)
+                    lang_logger.info(f"Processed repository: {result}")
+                except Exception:
+                    lang_logger.exception(f"Failed repository: {name_with_owner}")
+
+                progress_bar.update(1)
+
+                submitted = submit_next(worker)
+                if submitted is None:
+                    continue
+
+                next_ref, worker, next_name_with_owner = submitted
+                running[next_ref] = (worker, next_name_with_owner)
+                lang_logger.info(f"Started repository: {next_name_with_owner}")
+
+        progress_bar.close()
+        lang_logger.info("DONE!")
+    finally:
+        ray.shutdown()
 
 
 if __name__ == "__main__":

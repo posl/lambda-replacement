@@ -1,4 +1,4 @@
-from logging import INFO, FileHandler, Logger, getLogger
+from logging import INFO, FileHandler, getLogger
 
 import pandas as pd
 from tqdm import tqdm
@@ -25,12 +25,16 @@ if not logger.handlers:
     logger.addHandler(handler)
 
 
-def get_repositories(language: str, sample_size: int = SAMPLE_SIZE, df: pd.DataFrame = None, save_flag: bool = True) -> pd.DataFrame:
+def get_repositories(
+    language: str,
+    sample_size: int = SAMPLE_SIZE,
+    df: pd.DataFrame = None,
+    save_flag: bool = True,
+) -> pd.DataFrame:
     logger.info(f"Processing language: {language}")
 
-
     if df is None:
-        df = pd.read_pickle(lang_repositories_path(language, "pkl"))
+        df = pd.read_pickle(repositories_lang_path(language, "pkl"))
 
     success_count = 0
 
@@ -51,7 +55,10 @@ def get_repositories(language: str, sample_size: int = SAMPLE_SIZE, df: pd.DataF
                 language=language,
             )
         except GitCommandError as e:
-            logger.warning(f"Error occurred while fetching repository: {name_with_owner}", exc_info=e)
+            logger.warning(
+                f"Error occurred while fetching repository: {name_with_owner}",
+                exc_info=e,
+            )
             continue
         except Exception as e:
             logger.error(f"Unexpected error occurred: {name_with_owner}", exc_info=e)
@@ -66,9 +73,7 @@ def get_repositories(language: str, sample_size: int = SAMPLE_SIZE, df: pd.DataF
         df.loc[name_with_owner, "clone_date"] = clone_date
         df.loc[name_with_owner, "developers_count"] = developers_count
         df.loc[name_with_owner, "commit_count_after_introduction"] = repo.git.rev_list(
-            "--count",
-            f"--since={introduction_date}",
-            "HEAD"
+            "--count", f"--since={introduction_date}", "HEAD"
         )
 
         selected_indexes.append(name_with_owner)
@@ -81,13 +86,17 @@ def get_repositories(language: str, sample_size: int = SAMPLE_SIZE, df: pd.DataF
 
     result_df["developers_count"] = result_df["developers_count"].astype(int)
     result_df["clone_date"] = pd.to_datetime(result_df["clone_date"])
-    result_df["commit_count_after_introduction"] = result_df["commit_count_after_introduction"].astype(int)
+    result_df["commit_count_after_introduction"] = result_df[
+        "commit_count_after_introduction"
+    ].astype(int)
 
     if save_flag:
         result_df.to_pickle(PICKLE_DIR / f"repositories_{language}_sample.pkl")
         result_df.to_csv(CSV_DIR / f"repositories_{language}_sample.csv")
 
-    logger.info(f"Done sample data processing. Total successful repositories: {success_count}")
+    logger.info(
+        f"Done sample data processing. Total successful repositories: {success_count}"
+    )
 
     return result_df
 

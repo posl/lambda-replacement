@@ -35,6 +35,16 @@ def repositories_lang_sample_path(language: str, extension: str = "pkl") -> Path
             raise ValueError(f"Unsupported extension: {extension}")
 
 
+def repositories_lang_sample_acc_path(language: str, extension: str = "pkl") -> Path:
+    match extension:
+        case "csv":
+            return CSV_DIR / f"repositories_{language}_sample_acc.csv"
+        case "pkl":
+            return PICKLE_DIR / f"repositories_{language}_sample_acc.pkl"
+        case _:
+            raise ValueError(f"Unsupported extension: {extension}")
+
+
 # repositories
 def repositories_path(language: str, name_with_owner: str) -> Path:
     return DATA_DIR / "repositories" / language / name_with_owner
@@ -56,18 +66,34 @@ def lambda_delete_matching_log_path(language: str, name_with_owner: str) -> Path
     return LOG_DIR / "lambda_delete_matching" / language / f"{name_with_owner}.log"
 
 
-def jar_path(language: str) -> Path:
-    return (
-        PROJECT_ROOT
-        / "src"
-        / "java"
-        / language
-        / "target"
-        / f"{language}-1.0-SNAPSHOT-jar-with-dependencies.jar"
-    )
+# def jar_path(language: str) -> Path:
+#     return (
+#         PROJECT_ROOT
+#         / "src"
+#         / "java"
+#         / language
+#         / "target"
+#         / f"{language}-1.0-SNAPSHOT-jar-with-dependencies.jar"
+#     )
+
+
+JAR_PATH = str(
+    PROJECT_ROOT
+    / "src"
+    / "java"
+    / "core"
+    / "target"
+    / "lambda-replacement-core-1.0-SNAPSHOT-jar-with-dependencies.jar"
+)
 
 
 LANGUAGES = ["java", "javascript", "ruby", "php", "csharp", "cpp"]
+
+
+def get_repo_url(name_with_owner: str, language: str) -> str:
+    return f"lecun-tomoto:/hdd1/tomoto/lambda-replacement/data/repositories/{language}/{name_with_owner}"
+    # GITHUB_TOKEN = os.environ["GITHUB_TOKEN"]
+    # return f"https://{GITHUB_TOKEN}@github.com/{name_with_owner}.git"
 
 
 def get_extensions(language: str) -> str:
