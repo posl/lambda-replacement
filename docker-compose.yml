@@ -1,9 +1,15 @@
 services:
   lambda:
-    build: .
+    build:
+      context: .
+      args:
+        UID: ${UID}
+        GID: ${GID}
     volumes:
       - .:/workspace
       - ~/.ssh:/root/.ssh:ro
+    user: "${UID}:${GID}"
+
     tty: true
     working_dir: /workspace
     env_file:

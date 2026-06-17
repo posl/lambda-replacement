@@ -86,9 +86,9 @@ class WorkerActor:
             try:
                 cmd = [
                     "java",
+                    "-Xmx10g",
                     "-jar",
                     JAR_PATH,
-                    "-Xmx10g",
                     self.language,
                     commit.repo.working_dir,
                     commit.parents[0].hexsha,

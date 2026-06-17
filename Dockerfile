@@ -52,6 +52,12 @@ FROM ubuntu:24.04
 ARG DEBIAN_FRONTEND=noninteractive
 ARG TZ=Asia/Tokyo
 
+ARG UID=1000
+ARG GID=1000
+
+RUN groupadd -g $GID exp && \
+    useradd -m -u $UID -g $GID exp
+
 ENV TZ=${TZ}
 ENV LANG=en_US.UTF-8 \
     LC_ALL=en_US.UTF-8 \
@@ -91,11 +97,14 @@ ENV PATH="/opt/gumtree/bin:${PATH}"
 # ==================================================
 # Python environment (uv)
 # ==================================================
+USER exp
 WORKDIR /workspace
 COPY pyproject.toml uv.lock ./
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /usr/local/bin/
 
-RUN curl -LsSf https://astral.sh/uv/install.sh | sh && \
-    uv python install 3.12
+RUN uv python install 3.12 && \
+    uv sync
+
 
 RUN git config --global --add safe.directory '*'
 

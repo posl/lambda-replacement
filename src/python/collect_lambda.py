@@ -72,9 +72,9 @@ def process_commit(
         try:
             cmd = [
                 "java",
+                "-Xmx10g",
                 "-jar",
                 JAR_PATH,
-                "-Xmx10g",
                 language,
                 commit.repo.working_dir,
                 commit.parents[0].hexsha,
