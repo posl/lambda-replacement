@@ -97,4 +97,6 @@ COPY pyproject.toml uv.lock ./
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh && \
     uv python install 3.12
 
+RUN git config --global --add safe.directory '*'
+
 CMD ["/bin/bash"]

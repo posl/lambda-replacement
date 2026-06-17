@@ -199,7 +199,7 @@ def collect_lambda(language: str):
     extension = get_extensions(language)
 
     df = pd.read_pickle(repositories_lang_sample_pickle_path(language))
-    df.sort_values("commit_count_after_introduction", inplace=True, ascending=True)
+    df.sort_values("commit_count_after_introduction", inplace=True, ascending=False)
 
     for name_with_owner in tqdm(df["Name with Owner"], desc=language):
         commit_count = int(df.loc[name_with_owner, "commit_count_after_introduction"])

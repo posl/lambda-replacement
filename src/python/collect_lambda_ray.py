@@ -208,7 +208,7 @@ def collect_lambda_ray(language: str, num_cpus: int = 10):
         workers = [WorkerActor.remote(language) for _ in range(num_cpus)]
 
         df = pd.read_pickle(repositories_lang_sample_acc_path(language))
-        df.sort_values("commit_count_after_introduction", inplace=True, ascending=True)
+        df.sort_values("commit_count_after_introduction", inplace=True, ascending=False)
 
         pending_repositories = deque(df.index)
 
