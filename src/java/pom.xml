@@ -10,17 +10,16 @@
   <name>detection_lambda_replace</name>
 
   <modules>
-    <module>java</module>
-    <module>cpp</module>
-    <module>javascript</module>
-    <module>csharp</module>
-    <module>php</module>
-    <module>ruby</module>
+    <module>core</module>
   </modules>
 
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
+    <maven.compiler.release>17</maven.compiler.release>
+    <gumtree.version>4.0.0-beta3</gumtree.version>
+    <maven.assembly.version>3.7.1</maven.assembly.version>
+    <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
@@ -31,11 +30,14 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.8.1</version>
+          <version>${maven.compiler.plugin.version}</version>
           <configuration>
-            <source>${maven.compiler.source}</source>
-            <target>${maven.compiler.target}</target>
+            <release>${maven.compiler.release}</release>
           </configuration>
+        </plugin>
+        <plugin>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <version>${maven.assembly.version}</version>
         </plugin>
       </plugins>
     </pluginManagement>
