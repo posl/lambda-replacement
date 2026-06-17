@@ -74,6 +74,7 @@ def process_commit(
                 "java",
                 "-jar",
                 JAR_PATH,
+                "-Xmx10g",
                 language,
                 commit.repo.working_dir,
                 commit.parents[0].hexsha,
@@ -90,13 +91,20 @@ def process_commit(
             )
 
             if res.returncode != 0:
-                logger.error(
-                    f"{commit.hexsha:}: {src_file:}, {dst_file:}",
-                    exc_info=Exception(res.stderr),
-                )
+                err_msg = res.stderr
+                if not err_msg.startswith(
+                    'Exception in thread "main" java.io.IOException: File size too large'
+                ):
+                    logger.error(
+                        f"{commit.hexsha:}: {src_file:}, {dst_file:}",
+                        exc_info=Exception(err_msg),
+                    )
                 continue
         except KeyboardInterrupt:
             raise
+        except subprocess.TimeoutExpired:
+            logger.error(f"TimeoutExpired: {commit.hexsha:}: {src_file:}, {dst_file:}")
+            continue
         except Exception as e:
             logger.error(f"{commit.hexsha:}: {src_file:}, {dst_file:}", exc_info=e)
             continue

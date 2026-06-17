@@ -1,3 +1,5 @@
+import os
+
 from pathlib import Path
 
 # プロジェクトルート
@@ -51,7 +53,7 @@ def repositories_path(language: str, name_with_owner: str) -> Path:
 
 
 def project_replacement_path(language: str, name_with_owner: str) -> Path:
-    return RESULT_DIR / "lambda_replacement" / language / f"{name_with_owner}.pkl"
+    return RESULT_DIR / "lambda_replacement" / language / f"{name_with_owner}.csv"
 
 
 def project_delete_matching_path(language: str, name_with_owner: str) -> Path:

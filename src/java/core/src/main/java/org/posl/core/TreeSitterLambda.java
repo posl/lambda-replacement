@@ -36,6 +36,10 @@ public class TreeSitterLambda {
             String dstCode = GitFileLoader.removeNonAscii(
                     GitFileLoader.getGitFileContent(workingDir, dstHexsha, dstFilePath));
 
+            if (srcCode.length() == 0 || dstCode.length() == 0) {
+                return;
+            }
+
             LambdaAnalyzer.validateFileSize(srcCode, dstCode);
             ArrayList<String[]> results = LambdaAnalyzer.exploreLambda(language, srcCode, dstCode);
             results.stream()

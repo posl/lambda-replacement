@@ -143,8 +143,18 @@ final class LambdaAnalyzer {
 
     private static Tree findNearestStatementParent(LanguageConfig language, Tree node) {
         Tree parent = node.getParent();
+
+        if (parent != null && parent.getType().name.equals("ERROR")) {
+            throw new IllegalStateException(
+                    "Inserted node is within an error node, which may indicate a parsing issue");
+        }
+
         while (parent != null && !language.isStatementNode(parent.getType().name)) {
             parent = parent.getParent();
+            if (parent != null && parent.getType().name.equals("ERROR")) {
+                throw new IllegalStateException(
+                        "Inserted node is within an error node, which may indicate a parsing issue");
+            }
         }
         return parent;
     }
