@@ -3,6 +3,7 @@ services:
     build: .
     volumes:
       - .:/workspace
+      - ~/.ssh:/root/.ssh:ro
     tty: true
     working_dir: /workspace
     env_file:

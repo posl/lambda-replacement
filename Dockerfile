@@ -67,7 +67,7 @@ RUN apt update && apt install -y --no-install-recommends \
     libxml2 libxslt1.1 \
     libarchive13 \
     libcurl4 \
-    git \
+    git maven openssh-client\
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /usr/local/bin
