@@ -2,7 +2,18 @@
 
 ## 環境
 
-docker が最も簡単．以下のコマンドで環境を再現できる．
+docker が最も簡単．
+
+`.env_example`を`.env`にリネームし，以下を編集．
+
+```.env
+UID=
+GID=
+
+GITHUB_TOKEN=
+```
+
+以下のコマンドで環境を再現できる．
 
 ```sh
 docker compose up --build -d
@@ -41,7 +52,13 @@ tar -zxvf data/libraries-1.6.0-2020-01-12.tar.gz
 ### データ前処理
 
 ```sh
-uv run python  src/python/preprocessing.py
+uv run python -m src.python.preprocessing
+```
+
+### リポジトリ収集
+
+```sh
+uv run python -m src.python.get_repositories
 ```
 
 ## 実行
@@ -57,29 +74,29 @@ mvn clean package -f "src/java/pom.xml"
 - language は cpp・csharp・java・javascript・php・ruby のいずれか
 
 ```sh
-uv run python src/python/collect_lambda.py -l <language>
+uv run python -m src.python.collect_lambda -l <language>
 ```
 
 あるいは，以下で実行．これは並列実行を行う
 
 ```sh
-uv run python python/collect_lambda_ray.py -l <language> -n <num_cpus>
+uv run python -m src.python.collect_lambda_ray -l <language> -n <num_cpus>
 ```
 
 ### 3. RQ3用のスクリプトを実行する
 
 ```sh
-uv run python collect_delete_matching.py -l <language>
+uv run python -m src.python.collect_delete_matching -l <language>
 ```
 
 ```sh
-uv run python collect_delete_matching_ray.py -l <language> -n <num_cpus>
+uv run python -m src.python.collect_delete_matching_ray -l <language> -n <num_cpus>
 ```
 
 ### 4. RQ4用のスクリプトを実行する
 
 ```sh
-uv run python rq4_preprocessing.py
+uv run python -m src.python.rq4_preprocessing
 ```
 
 ## オープンコーディング
