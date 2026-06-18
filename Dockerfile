@@ -99,7 +99,7 @@ ENV PATH="/opt/gumtree/bin:${PATH}"
 # ==================================================
 USER exp
 WORKDIR /workspace
-COPY pyproject.toml uv.lock ./
+COPY --chown=exp:exp pyproject.toml uv.lock ./
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /usr/local/bin/
 
 RUN uv python install 3.12 && \
