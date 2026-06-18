@@ -60,7 +60,6 @@ RUN groupadd -g $GID exp && \
 ENV TZ=${TZ}
 ENV LANG=en_US.UTF-8 \
     LC_ALL=en_US.UTF-8 \
-    JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8 \
     PATH="/root/.local/bin:${PATH}"
 
 # ---- runtime dependencies only ----
