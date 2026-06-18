@@ -8,7 +8,7 @@ ARG SRCML_VERSION=1.1.0
 ARG GUMTREE_VERSION=4.0.0-beta3
 
 ENV LANG=en_US.UTF-8 \
-    LC_ALL=en_US.UTF-8 \
+    LC_ALL=en_US.UTF-8
 
 RUN apt update && apt install -y --no-install-recommends \
     build-essential \
