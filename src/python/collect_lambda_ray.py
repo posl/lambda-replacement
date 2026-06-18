@@ -28,6 +28,7 @@ from .config import (
 class LambdaResult:
     commit: str
     datetime: datetime
+    modifying_type: str
     src_file: str
     dst_file: str
     dst_start: int
@@ -128,14 +129,14 @@ class WorkerActor:
             for line in res.stdout.splitlines():
                 parts = line.split("\t")
 
-                if len(parts) != 5:
-                    continue
+                assert len(parts) == 6, f"Unexpected output format: {line}"
 
-                dst_start, dst_end, src_start, src_end, result = parts
+                modifying_type, dst_start, dst_end, src_start, src_end, result = parts
 
                 results.append(
                     LambdaResult(
                         commit=commit.hexsha,
+                        modifying_type=modifying_type,
                         datetime=commit.committed_datetime,
                         src_file=src_file,
                         dst_file=dst_file,
