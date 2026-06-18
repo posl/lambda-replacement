@@ -9,7 +9,6 @@ ARG GUMTREE_VERSION=4.0.0-beta3
 
 ENV LANG=en_US.UTF-8 \
     LC_ALL=en_US.UTF-8 \
-    JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 
 RUN apt update && apt install -y --no-install-recommends \
     build-essential \
