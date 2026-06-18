@@ -8,7 +8,8 @@ ARG SRCML_VERSION=1.1.0
 ARG GUMTREE_VERSION=4.0.0-beta3
 
 ENV LANG=en_US.UTF-8 \
-    LC_ALL=en_US.UTF-8
+    LC_ALL=en_US.UTF-8 \
+    JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 
 RUN apt update && apt install -y --no-install-recommends \
     build-essential \
@@ -40,8 +41,8 @@ RUN curl -L https://github.com/srcML/srcML/archive/refs/tags/v${SRCML_VERSION}.t
 RUN curl -L https://github.com/GumTreeDiff/gumtree/archive/refs/tags/v${GUMTREE_VERSION}.tar.gz \
     | tar xz && \
     mv gumtree-${GUMTREE_VERSION} gumtree && \
+    JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF-8" \
     gumtree/gradlew -p gumtree build
-
 
 # ==================================================
 # Runtime stage (FINAL IMAGE)
@@ -98,7 +99,7 @@ ENV PATH="/opt/gumtree/bin:${PATH}"
 # ==================================================
 USER exp
 WORKDIR /workspace
-COPY --chown=exp:exp pyproject.toml uv.lock ./
+COPY pyproject.toml uv.lock ./
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /usr/local/bin/
 
 RUN uv python install 3.12 && \

@@ -108,7 +108,7 @@ class WorkerActor:
                 if res.returncode != 0:
                     err_msg = res.stderr
                     if not err_msg.startswith(
-                        'Exception in thread "main" java.io.IOException: File size too large'
+                        "Exception in thread \"main\" java.io.IOException: File size too large"
                     ):
                         logger.error(
                             f"{commit.hexsha:}: {src_file:}, {dst_file:}",
