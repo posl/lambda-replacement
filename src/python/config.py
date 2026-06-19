@@ -89,7 +89,7 @@ JAR_PATH = str(
 )
 
 
-LANGUAGES = ["java", "javascript", "ruby", "php", "csharp", "cpp"]
+LANGUAGES = ["csharp", "cpp", "java", "javascript", "php", "ruby"]
 
 
 def get_repo_url(name_with_owner: str, language: str) -> str:
@@ -120,3 +120,15 @@ def get_introduction_date(language: str) -> str:
         "ruby": "2009-01-30",
     }
     return introduction_date_dict[language]
+
+
+def get_language_title(language: str):
+    title_dict = {
+        "java": "Java",
+        "javascript": "JavaScript",
+        "cpp": "C++",
+        "csharp": "C#",
+        "php": "PHP",
+        "ruby": "Ruby",
+    }
+    return title_dict[language]

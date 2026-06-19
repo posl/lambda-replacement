@@ -29,11 +29,6 @@
       <artifactId>gen.treesitter-ng</artifactId>
       <version>${gumtree.version}</version>
     </dependency>
-    <dependency>
-      <groupId>com.github.gumtreediff</groupId>
-      <artifactId>gen.srcml</artifactId>
-      <version>${gumtree.version}</version>
-    </dependency>
   </dependencies>
 
   <build>
