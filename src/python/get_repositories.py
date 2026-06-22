@@ -108,7 +108,6 @@ def get_repositories(
 
         developers_count = get_developers_count(repo)
         commit_count_after_introduction = get_commit_count_after_introduction(repo, introduction_date)
-        ))
 
         updates.append(
             {
