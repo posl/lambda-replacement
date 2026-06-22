@@ -126,17 +126,9 @@ def get_past_contents(commit: git.Commit, file: str) -> str:
     return commit.repo.git.show(f"{commit.hexsha}:{file}")
 
 
-def get_default_branch(repo: git.Repo) -> str:
-    return repo.git.symbolic_ref(
-        "refs/remotes/origin/HEAD"
-    ).split("/")[-1]
-
-
 def get_developers_count(repo: git.Repo) -> int:
-    default_branch = get_default_branch(repo)
-    return len(repo.git.shortlog("-sn", f"origin/{default_branch}").splitlines())
+    return len(repo.git.shortlog("-sn", "HEAD").splitlines())
 
 
 def get_commit_count_after_introduction(repo: git.Repo, introduction_date: str) -> int:
-    default_branch = get_default_branch(repo)
-    return int(repo.git.rev_list("--count", f"--since={introduction_date}", f"origin/{default_branch}"))
+    return int(repo.git.rev_list("--count", f"--since={introduction_date}", "HEAD"))
