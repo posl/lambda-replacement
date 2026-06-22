@@ -5,7 +5,7 @@ import pandas as pd
 from tqdm import tqdm
 from git import GitCommandError
 
-from .git_operate import get_repo
+from .git_operate import clone_git_repo, get_developers_count, get_commit_count_after_introduction
 from .config import (
     repositories_lang_path,
     CSV_DIR,
@@ -81,7 +81,7 @@ def get_repositories(
             continue
 
         try:
-            repo = get_repo(
+            repo = clone_git_repo(
                 name_with_owner=name_with_owner,
                 language=language,
             )
@@ -106,12 +106,8 @@ def get_repositories(
             logger.error(f"Unexpected error occurred: {name_with_owner}", exc_info=e)
             continue
 
-        developers_count = len(
-            repo.git.shortlog("-sn", "HEAD").splitlines()
-        )
-
-        commit_count_after_introduction = int(repo.git.rev_list(
-            "--count", f"--since={introduction_date}", "HEAD"
+        developers_count = get_developers_count(repo)
+        commit_count_after_introduction = get_commit_count_after_introduction(repo, introduction_date)
         ))
 
         updates.append(

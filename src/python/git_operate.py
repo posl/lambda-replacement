@@ -12,7 +12,7 @@ DIFF_PATTERN_COMPILER = re.compile("([ADMCR])[0-9]*\t(.*)")
 TWO_FILES_PATTERN_COMPILER = re.compile("(.*)\t(.*)")
 
 
-def __clone_git_repo(to_path: str, name_with_owner: str, language: str) -> git.Repo:
+def clone_git_repo(name_with_owner: str, language: str) -> git.Repo:
     """
     git リポジトリをクローンする\n
     保存場所は repositories/owner/name\n
@@ -21,6 +21,7 @@ def __clone_git_repo(to_path: str, name_with_owner: str, language: str) -> git.R
     """
     url = get_repo_url(name_with_owner, language)
 
+    to_path = repositories_path(language, name_with_owner)
     repo = git.Repo.clone_from(url, to_path, no_checkout=True)
     sleep(1)
 
@@ -48,14 +49,12 @@ def __clone_git_repo(to_path: str, name_with_owner: str, language: str) -> git.R
 def get_repo(name_with_owner: str, language: str) -> git.Repo:
     """
     git リポジトリを取得する\n
-    保存場所は repositories/owner/name\n
-    成功時， git.Repo を返し，失敗時 エラー を返す
     """
     to_path = repositories_path(language, name_with_owner)
-    if to_path.exists():
-        return git.Repo(to_path)
+    if not to_path.exists():
+        raise FileNotFoundError(f"Repository not found: {name_with_owner}")
     else:
-        repo = __clone_git_repo(str(to_path), name_with_owner, language)
+        repo = git.Repo(str(to_path))
         return repo
 
 
@@ -125,3 +124,19 @@ class DiffCodesGenerator:
 
 def get_past_contents(commit: git.Commit, file: str) -> str:
     return commit.repo.git.show(f"{commit.hexsha}:{file}")
+
+
+def get_default_branch(repo: git.Repo) -> str:
+    return repo.git.symbolic_ref(
+        "refs/remotes/origin/HEAD"
+    ).split("/")[-1]
+
+
+def get_developers_count(repo: git.Repo) -> int:
+    default_branch = get_default_branch(repo)
+    return len(repo.git.shortlog("-sn", f"origin/{default_branch}").splitlines())
+
+
+def get_commit_count_after_introduction(repo: git.Repo, introduction_date: str) -> int:
+    default_branch = get_default_branch(repo)
+    return int(repo.git.rev_list("--count", f"--since={introduction_date}", f"origin/{default_branch}"))
