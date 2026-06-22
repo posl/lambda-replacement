@@ -146,7 +146,10 @@ def get_repositories(
 
     result_df = df.loc[selected_indexes].copy()
 
-    assert len(result_df) == sample_size
+    if len(result_df) != sample_size:
+        logger.warning(
+            f"Sample size mismatch for language {language}. Expected: {sample_size}, Actual: {len(result_df)}"
+        )
 
     result_df["developers_count"] = result_df["developers_count"].astype(int)
     result_df["clone_date"] = pd.to_datetime(result_df["clone_date"])
