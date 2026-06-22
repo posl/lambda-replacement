@@ -5,7 +5,11 @@ import pandas as pd
 from tqdm import tqdm
 from git import GitCommandError
 
-from .git_operate import clone_git_repo, get_developers_count, get_commit_count_after_introduction
+from .git_operate import (
+    clone_git_repo,
+    get_developers_count,
+    get_commit_count_after_introduction,
+)
 from .config import (
     repositories_lang_path,
     CSV_DIR,
@@ -26,6 +30,7 @@ if not logger.handlers:
     handler = FileHandler(LOG_DIR / "get_repositories.log")
     handler.setLevel(INFO)
     logger.addHandler(handler)
+
 
 def is_valid_repository(
     developers_count: int,
@@ -72,9 +77,11 @@ def get_repositories(
         if success_count >= sample_size:
             break
 
-
         if pd.notna(df.at[name_with_owner, "available"]):
-            if is_valid_repository(df.at[name_with_owner, "developers_count"], df.at[name_with_owner, "commit_count_after_introduction"]):
+            if is_valid_repository(
+                df.at[name_with_owner, "developers_count"],
+                df.at[name_with_owner, "commit_count_after_introduction"],
+            ):
                 selected_indexes.append(name_with_owner)
                 success_count += 1
                 pbar.set_postfix(success=success_count)
@@ -88,9 +95,10 @@ def get_repositories(
             clone_date = pd.Timestamp.now()
         except GitCommandError as e:
             updates.append(
-            {"index": name_with_owner,
-                "available": False,
-            }
+                {
+                    "index": name_with_owner,
+                    "available": False,
+                }
             )
             logger.warning(
                 f"Error occurred while fetching repository: {name_with_owner}",
@@ -99,7 +107,8 @@ def get_repositories(
             continue
         except Exception as e:
             updates.append(
-                {"index": name_with_owner,
+                {
+                    "index": name_with_owner,
                     "available": False,
                 }
             )
@@ -107,7 +116,9 @@ def get_repositories(
             continue
 
         developers_count = get_developers_count(repo)
-        commit_count_after_introduction = get_commit_count_after_introduction(repo, introduction_date)
+        commit_count_after_introduction = get_commit_count_after_introduction(
+            repo, introduction_date
+        )
 
         updates.append(
             {

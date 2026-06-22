@@ -9,6 +9,7 @@ from .config import (
     RESULT_DIR,
     LOG_DIR,
     lang_repositories_path,
+    get_introduction_date
 )
 
 CHUNK_SIZE = 100_000
@@ -130,100 +131,103 @@ def data_preprocessing():
     created_time > last_synced_time のものを除外\n
     """
 
-    reader = pd.read_csv(
-        LIBRARIES_CSV_PATH,
-        skiprows=[0],
-        names=LIBRARIES_HEADER,
-        chunksize=CHUNK_SIZE,
-        index_col="ID",
-        encoding="utf-8",
-        converters={
-            "Mirror URL": str,
-            "Security Threat Model filename": str,
-            "Security Audit filename": str,
-            "UUID": str,
-            "Fork Source Name with Owner": str,
-            "Status": str,
-            "Readme filename": str,
-            "Changelog filename": str,
-            "Contributing guidelines filename": str,
-            "License filename": str,
-            "Code of Conduct filename": str,
-            "_5": str,
-            "_6": str,
-            "_7": str,
-            "Pages enabled": bool,
-        },
-    )
-
-    if not LIBRARIES_ORIGINAL_PICKLE_DIR.exists():
-        LIBRARIES_ORIGINAL_PICKLE_DIR.mkdir(parents=True, exist_ok=True)
-
-    if not LIBRARIES_CLEAN_PICKLE_DIR.exists():
-        LIBRARIES_CLEAN_PICKLE_DIR.mkdir(parents=True, exist_ok=True)
-
-    chunk_dfs = []
-
-    for i, chunk in tqdm(enumerate(reader)):
-        chunk.to_pickle(LIBRARIES_ORIGINAL_PICKLE_DIR / f"chunk_{i}.pkl")
-
-        # 必要ないパラメータを除外
-        chunk_cleaned = chunk[LIBRARIES_PARAMETERS].copy()
-
-        # 欠損値データを削除
-        chunk_cleaned.dropna(subset=LIBRARIES_PARAMETERS, inplace=True)
-
-        #  Forkプロジェクトを除外
-        chunk_cleaned = chunk_cleaned[~chunk_cleaned["Fork"]]
-
-        # フォーク数が5以上のものだけを対象
-        chunk_cleaned["Forks Count"] = chunk_cleaned["Forks Count"].astype(int)
-        chunk_cleaned = chunk_cleaned[chunk_cleaned["Forks Count"] >= 5]
-
-        # ライセンスを絞る
-        chunk_cleaned = chunk_cleaned[chunk_cleaned["License"].isin(LIBRARIES_LICENSES)]
-
-        # GitHub のみ
-        chunk_cleaned = chunk_cleaned[chunk_cleaned["Host Type"] == "GitHub"]
-
-        # 必要ないので削除
-        del chunk_cleaned["Fork"]
-        del chunk_cleaned["License"]
-        del chunk_cleaned["Host Type"]
-
-        # 時間データをタイムスタンプ型に変換
-        chunk_cleaned["Created Timestamp"] = pd.to_datetime(
-            chunk_cleaned["Created Timestamp"], format="%Y-%m-%d %H:%M:%S UTC", utc=True
-        )
-        chunk_cleaned["Last Synced Timestamp"] = pd.to_datetime(
-            chunk_cleaned["Last Synced Timestamp"],
-            format="%Y-%m-%d %H:%M:%S UTC",
-            utc=True,
+    if LIBRARIES_PICKLE_PATH.exists():
+        repositories = pd.read_pickle(LIBRARIES_PICKLE_PATH)
+    else:
+        reader = pd.read_csv(
+            LIBRARIES_CSV_PATH,
+            skiprows=[0],
+            names=LIBRARIES_HEADER,
+            chunksize=CHUNK_SIZE,
+            index_col="ID",
+            encoding="utf-8",
+            converters={
+                "Mirror URL": str,
+                "Security Threat Model filename": str,
+                "Security Audit filename": str,
+                "UUID": str,
+                "Fork Source Name with Owner": str,
+                "Status": str,
+                "Readme filename": str,
+                "Changelog filename": str,
+                "Contributing guidelines filename": str,
+                "License filename": str,
+                "Code of Conduct filename": str,
+                "_5": str,
+                "_6": str,
+                "_7": str,
+                "Pages enabled": bool,
+            },
         )
 
-        #     # created_time > last_synced_time となっているものを除外
-        #     chunk_cleaned = chunk_cleaned[~(chunk_cleaned["last_synced_time"] < chunk_cleaned["created_time"])]
-        # int 型に変換
-        chunk_cleaned["Watchers Count"] = chunk_cleaned["Watchers Count"].astype(int)
-        chunk_cleaned["Size"] = chunk_cleaned["Size"].astype(int)
-        chunk_cleaned["Stars Count"] = chunk_cleaned["Stars Count"].astype(int)
-        chunk_cleaned["Open Issues Count"] = chunk_cleaned["Open Issues Count"].astype(
-            int
-        )
+        if not LIBRARIES_ORIGINAL_PICKLE_DIR.exists():
+            LIBRARIES_ORIGINAL_PICKLE_DIR.mkdir(parents=True, exist_ok=True)
 
-        chunk_cleaned.to_pickle(LIBRARIES_CLEAN_PICKLE_DIR / f"chunk_{i}_clean.pkl")
-        chunk_dfs.append(chunk_cleaned)
+        if not LIBRARIES_CLEAN_PICKLE_DIR.exists():
+            LIBRARIES_CLEAN_PICKLE_DIR.mkdir(parents=True, exist_ok=True)
 
-    repositories = pd.concat(chunk_dfs, axis=0)
+        chunk_dfs = []
 
-    repositories["Watchers Count"] = repositories["Watchers Count"].astype(int)
-    repositories["Size"] = repositories["Size"].astype(int)
-    repositories["Stars Count"] = repositories["Stars Count"].astype(int)
-    repositories["Open Issues Count"] = repositories["Open Issues Count"].astype(int)
+        for i, chunk in tqdm(enumerate(reader)):
+            chunk.to_pickle(LIBRARIES_ORIGINAL_PICKLE_DIR / f"chunk_{i}.pkl")
 
-    repositories.set_index("Name with Owner", inplace=True)
+            # 必要ないパラメータを除外
+            chunk_cleaned = chunk[LIBRARIES_PARAMETERS].copy()
 
-    repositories.to_pickle(LIBRARIES_PICKLE_PATH)
+            # 欠損値データを削除
+            chunk_cleaned.dropna(subset=LIBRARIES_PARAMETERS, inplace=True)
+
+            #  Forkプロジェクトを除外
+            chunk_cleaned = chunk_cleaned[~chunk_cleaned["Fork"]]
+
+            # フォーク数が5以上のものだけを対象
+            chunk_cleaned["Forks Count"] = chunk_cleaned["Forks Count"].astype(int)
+            chunk_cleaned = chunk_cleaned[chunk_cleaned["Forks Count"] >= 5]
+
+            # ライセンスを絞る
+            chunk_cleaned = chunk_cleaned[chunk_cleaned["License"].isin(LIBRARIES_LICENSES)]
+
+            # GitHub のみ
+            chunk_cleaned = chunk_cleaned[chunk_cleaned["Host Type"] == "GitHub"]
+
+            # 必要ないので削除
+            del chunk_cleaned["Fork"]
+            del chunk_cleaned["License"]
+            del chunk_cleaned["Host Type"]
+
+            # 時間データをタイムスタンプ型に変換
+            chunk_cleaned["Created Timestamp"] = pd.to_datetime(
+                chunk_cleaned["Created Timestamp"], format="%Y-%m-%d %H:%M:%S UTC", utc=True
+            )
+            chunk_cleaned["Last Synced Timestamp"] = pd.to_datetime(
+                chunk_cleaned["Last Synced Timestamp"],
+                format="%Y-%m-%d %H:%M:%S UTC",
+                utc=True,
+            )
+
+            #     # created_time > last_synced_time となっているものを除外
+            #     chunk_cleaned = chunk_cleaned[~(chunk_cleaned["last_synced_time"] < chunk_cleaned["created_time"])]
+            # int 型に変換
+            chunk_cleaned["Watchers Count"] = chunk_cleaned["Watchers Count"].astype(int)
+            chunk_cleaned["Size"] = chunk_cleaned["Size"].astype(int)
+            chunk_cleaned["Stars Count"] = chunk_cleaned["Stars Count"].astype(int)
+            chunk_cleaned["Open Issues Count"] = chunk_cleaned["Open Issues Count"].astype(
+                int
+            )
+
+            chunk_cleaned.to_pickle(LIBRARIES_CLEAN_PICKLE_DIR / f"chunk_{i}_clean.pkl")
+            chunk_dfs.append(chunk_cleaned)
+
+        repositories = pd.concat(chunk_dfs, axis=0)
+
+        repositories["Watchers Count"] = repositories["Watchers Count"].astype(int)
+        repositories["Size"] = repositories["Size"].astype(int)
+        repositories["Stars Count"] = repositories["Stars Count"].astype(int)
+        repositories["Open Issues Count"] = repositories["Open Issues Count"].astype(int)
+
+        repositories.set_index("Name with Owner", inplace=True)
+
+        repositories.to_pickle(LIBRARIES_PICKLE_PATH)
 
     lang_raw = {
         "java": "Java",
@@ -236,6 +240,11 @@ def data_preprocessing():
 
     for language in LANGUAGES:
         language_df = repositories[repositories["Language"] == lang_raw[language]]
+
+        introduction_date = get_introduction_date(language)
+
+        language_df = language_df[language_df['Created Timestamp'] < introduction_date]
+
         language_df = language_df.sample(frac=1, random_state=42)
         language_df.set_index("Name with Owner", inplace=True)
         language_df.to_pickle(lang_repositories_path(language, "pkl"))
