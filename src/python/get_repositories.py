@@ -69,7 +69,7 @@ def get_repositories(
 
     selected_indexes = []
 
-    pbar = tqdm(df.index(), total=len(df), desc=f"{language}")
+    pbar = tqdm(df.index, total=len(df), desc=f"{language}")
 
     updates = []
 

@@ -8,7 +8,7 @@ from .config import (
     CSV_DIR,
     RESULT_DIR,
     LOG_DIR,
-    lang_repositories_path,
+    repositories_lang_path,
     get_introduction_date
 )
 
@@ -247,8 +247,8 @@ def data_preprocessing():
 
         language_df = language_df.sample(frac=1, random_state=42)
         language_df.set_index("Name with Owner", inplace=True)
-        language_df.to_pickle(lang_repositories_path(language, "pkl"))
-        language_df.to_csv(lang_repositories_path(language, "csv"))
+        language_df.to_pickle(repositories_lang_path(language, "pkl"))
+        language_df.to_csv(repositories_lang_path(language, "csv"))
         print(f"{language} done")
 
 
