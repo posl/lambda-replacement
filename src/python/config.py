@@ -52,9 +52,14 @@ def repositories_path(language: str, name_with_owner: str) -> Path:
     return DATA_DIR / "repositories" / language / name_with_owner
 
 
-def project_replacement_path(language: str, name_with_owner: str) -> Path:
-    return RESULT_DIR / "lambda_replacement" / language / f"{name_with_owner}.csv"
-
+def project_replacement_path(language: str, name_with_owner: str, extension: str = "csv") -> Path:
+    match extension:
+        case "csv":
+            return RESULT_DIR / "lambda_replacement" / language / f"{name_with_owner}.csv"
+        case "pkl":
+            return RESULT_DIR / "lambda_replacement" / language / f"{name_with_owner}.pkl"
+        case _:
+            raise ValueError(f"Unsupported extension: {extension}")
 
 def project_delete_matching_path(language: str, name_with_owner: str) -> Path:
     return RESULT_DIR / "lambda_delete_matching" / language / f"{name_with_owner}.csv"

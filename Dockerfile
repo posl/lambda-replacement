@@ -54,8 +54,12 @@ ARG TZ=Asia/Tokyo
 ARG UID=1000
 ARG GID=1000
 
-RUN groupadd -g $GID exp && \
-    useradd -m -u $UID -g $GID exp
+RUN EXISTING_GROUP=$(getent group ${GID} | cut -d: -f1 || true) && \
+    if [ -z "$EXISTING_GROUP" ]; then \
+        groupadd -g ${GID} exp; \
+        EXISTING_GROUP=exp; \
+    fi && \
+    useradd -m -u ${UID} -g ${EXISTING_GROUP} exp
 
 ENV TZ=${TZ}
 ENV LANG=en_US.UTF-8 \

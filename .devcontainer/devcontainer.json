@@ -1,41 +1,27 @@
 {
   "name": "lambda-replacement",
-  "dockerFile": "../Dockerfile",
-  "context": "..",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "lambda",
   "workspaceFolder": "/workspace",
-  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
-  "containerEnv": {
-    "WORKSPACE_FOLDER": "${containerWorkspaceFolder}"
-  },
 
-  "runArgs": ["--env-file", ".env", "--shm-size", "256g", "-it", "--init"],
   "customizations": {
     "vscode": {
       "settings": {
-        "terminal.integrated.shell.linux": "zsh",
-        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.shell.linux": "bash",
+        "terminal.integrated.defaultProfile.linux": "bash",
         "terminal.integrated.profiles.linux": {
           "bash": {
-            "path": "/usr/bin/zsh",
+            "path": "/usr/bin/bash",
             "args": ["-l", "-i"]
           }
         },
-        "python.pythonPath": "/usr/local/bin/python",
-        "python.linting.enabled": true,
-        "python.linting.pylintEnabled": true,
-        "python.linting.flake8Enabled": true,
-        "python.linting.flake8Args": ["--ignore=E402,E501"],
-        "python.formatting.provider": "autopep8",
-        "python.formatting.autopep8Args": [
-          "--ignore",
-          "E402,E501",
-          "--max-line-length",
-          "150"
-        ],
         "[python]": {
           "editor.formatOnSave": true,
-          "editor.formatOnType": true,
-          "editor.defaultFormatter": "charliermarsh.ruff"
+          "editor.defaultFormatter": "charliermarsh.ruff",
+          "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+          }
         },
         "terminal.integrated.fontSize": 17,
         "editor.fontSize": 17

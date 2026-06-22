@@ -51,7 +51,7 @@ def get_repositories_acc(language: str, sample_size: int = SAMPLE_SIZE) -> pd.Da
                 language=language,
             )
         except GitCommandError as e:
-            logger.warning(
+            logger.error(
                 f"Error occurred while fetching repository: {name_with_owner}",
                 exc_info=e,
             )
