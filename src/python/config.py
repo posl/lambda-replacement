@@ -37,16 +37,6 @@ def repositories_lang_sample_path(language: str, extension: str = "pkl") -> Path
             raise ValueError(f"Unsupported extension: {extension}")
 
 
-def repositories_lang_sample_acc_path(language: str, extension: str = "pkl") -> Path:
-    match extension:
-        case "csv":
-            return CSV_DIR / f"repositories_{language}_sample_acc.csv"
-        case "pkl":
-            return PICKLE_DIR / f"repositories_{language}_sample_acc.pkl"
-        case _:
-            raise ValueError(f"Unsupported extension: {extension}")
-
-
 # repositories
 def repositories_path(language: str, name_with_owner: str) -> Path:
     return DATA_DIR / "repositories" / language / name_with_owner

@@ -16,7 +16,7 @@ from ray.experimental.tqdm_ray import tqdm as rtqdm
 from .git_operate import DiffCodesGenerator, get_diff, get_repo
 from .config import (
     JAR_PATH,
-    repositories_lang_sample_acc_path,
+    repositories_lang_sample_path,
     project_replacement_path,
     lambda_replacement_log_path,
     get_extensions,
@@ -218,7 +218,7 @@ def collect_lambda_ray(language: str, num_cpus: int = 10):
 
         workers = [WorkerActor.remote(language) for _ in range(num_cpus)]
 
-        df = pd.read_pickle(repositories_lang_sample_acc_path(language))
+        df = pd.read_pickle(repositories_lang_sample_path(language, "pkl"))
         df.sort_values("commit_count_after_introduction", inplace=True, ascending=False)
 
         pending_repositories = deque(df.index)
