@@ -94,13 +94,13 @@ JAR_PATH = str(
 )
 
 
-LANGUAGES = ["csharp", "cpp", "java", "javascript", "php", "ruby"]
+# LANGUAGES = ["csharp", "cpp", "java", "javascript", "php", "ruby"]
+LANGUAGES = ["cpp",  "ruby", "java", "javascript", "php",]
 
 
 def get_repo_url(name_with_owner: str, language: str) -> str:
-    return f"lecun-tomoto:/hdd1/tomoto/lambda-replacement/data/repositories/{language}/{name_with_owner}"
-    # GITHUB_TOKEN = os.environ["GITHUB_TOKEN"]
-    # return f"https://{GITHUB_TOKEN}@github.com/{name_with_owner}.git"
+    GITHUB_TOKEN = os.environ["GITHUB_TOKEN"]
+    return f"https://{GITHUB_TOKEN}@github.com/{name_with_owner}.git"
 
 
 def get_extensions(language: str) -> str:
