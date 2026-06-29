@@ -108,7 +108,7 @@ class WorkerActor:
                 if res.returncode != 0:
                     err_msg = res.stderr
                     if not err_msg.startswith(
-                        "Exception in thread \"main\" java.io.IOException: File size too large"
+                        'Exception in thread "main" java.io.IOException: File size too large'
                     ):
                         logger.error(
                             f"{commit.hexsha:}: {src_file:}, {dst_file:}",
@@ -131,7 +131,7 @@ class WorkerActor:
 
                 assert len(parts) == 6, f"Unexpected output format: {line}"
 
-                modifying_type, dst_start, dst_end, src_start, src_end, result = parts
+                modifying_type, src_start, src_end, dst_start, dst_end, result = parts
 
                 results.append(
                     LambdaResult(

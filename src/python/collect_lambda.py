@@ -115,7 +115,7 @@ def process_commit(
 
             assert len(parts) == 6, f"Unexpected output format: {line}"
 
-            modifying_type, dst_start, dst_end, src_start, src_end, result = parts
+            modifying_type, src_start, src_end, dst_start, dst_end, result = parts
 
             results.append(
                 LambdaResult(
