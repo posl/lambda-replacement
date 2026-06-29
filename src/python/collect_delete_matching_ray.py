@@ -7,7 +7,6 @@ from dataclasses import dataclass, asdict
 import pandas as pd
 import psutil
 import ray
-from git_operate import get_repo
 from ray.experimental.tqdm_ray import tqdm as rtqdm
 
 
@@ -18,6 +17,7 @@ from .config import (
     project_delete_matching_path,
     lambda_delete_matching_log_path,
 )
+from .git_operate import get_repo
 
 
 @dataclass
