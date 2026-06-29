@@ -55,7 +55,7 @@ def setup_logger(name: str, language: str, level: int = INFO) -> Logger:
 def get_name_with_owners(language: str) -> list[str]:
     base_dir = RESULT_DIR / "lambda_replacement" / language
 
-    return sorted(f"{p.parent.name}/{p.stem}" for p in base_dir.glob("*/**/*.pkl"))
+    return sorted(f"{p.parent.name}/{p.stem}" for p in base_dir.glob("*/*.csv"))
 
 
 @ray.remote
